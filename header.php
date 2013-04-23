@@ -1,39 +1,27 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 	<head <?php language_attributes(); ?>>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php the_title(); ?></title>
+
+        <!-- CSS -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+        <!-- Police Ubuntu -->
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+        <!-- JavaScript -->
+        <script src="wp-content/themes/CetC_theme/js/jquery.min.js"></script>
+        <script src="wp-content/themes/CetC_theme/js/menu.js"></script>
+
 		<?php wp_head(); ?>
 	</head>
 	<body>
 		<div class="wrap">
 			<header>
+                <p><?php bloginfo('theme_url')?></p>
+                <img alt="logo" src="wp-content/themes/CetC_theme/img/logo.jpg"/>
 				<h1><a><?php bloginfo('name'); ?></a></h1>
 				<h2><?php bloginfo('description'); ?></h2>
+                <?php get_search_form( $echo ); ?>
 			</header>
-
-            <div id="menu">
-                <h2>MENU</h2>
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="">Présentation</a></li>
-                    <!-- MODE FUFU
-                    <ul>
-                        <li>Objectif</li>
-                        <li>Tourisme adapté</li>
-                        <li>Pôle intégration</li>
-                    </ul>
-                    -->
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Documents</a></li>
-                </ul>
-
-                <h2>PARTENAIRE</h2>
-                <ul>
-                    <li><a href="#">part1</a></li>
-                    <li><a href="#">part2</a></li>
-                    <li><a href="#">part3</a></li>
-                </ul>
-            </div>
+               
