@@ -29,6 +29,7 @@
 	</head>
 	<body>
 		<div class="wrap">
+			
 			<header>
 				<h1><a>Culture et cultures</a></h1>
 				<h2>association de tourisme</h2>
@@ -43,10 +44,15 @@
                     </form>
                 </section>
 			</header>
-
-            <?php include 'menu.php';?>
 			
-			<div id="main">
+			<div id="content">
+				
+				<?php 
+					  include 'menu.php'; 
+					  include 'sous_page.php';
+				?>
+			
+				<div id="main">
 				<h2 class="main-titre">Bonjour</h2>
 				<div class="home">
 					<h3 class="home-name">Bonjour</h3>
@@ -58,12 +64,14 @@
 			</div>
 			
 			
-			<div class="side">
+				<div id="side">
 			<!-- Bouton RSS -->
 			<a class="rss" href="#">
 			<object type="image/svg+xml" data="img/rss.svg" width="55" height="55">
 			</object>
 			</a>
+			</div>
+			
 			</div>
 			
 			<footer>
@@ -77,6 +85,7 @@
 				</div>
 				
 			</footer>
+		
 		</div>
 	</body>
 </html>

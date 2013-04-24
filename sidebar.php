@@ -1,6 +1,7 @@
 <div class="side">
-	<?php dynamic_sidebar(); ?>
-	<?php wp_insert_user();?>
+
+	<?php //dynamic_sidebar(); ?>
+	<?php //wp_insert_user();?>
 
 	<!-- Bouton RSS -->
 	<a class="rss" href="<?php bloginfo('rss2_url'); ?>">

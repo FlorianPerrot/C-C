@@ -1,4 +1,5 @@
 			<footer>
+				<img class="actions-site" alt="ouverture du site" src="img/fermeture-sous-page.png">
 				<div>
 					<p>Association régie par la loi du 1er juillet 1901 </br> N°Siret : 49779353900014 </br> Code ape 913E 
 					Association de tourisme agrée N°AG.026.09.0001</p>

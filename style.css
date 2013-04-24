@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3{
+	color: #F3730D;
 	font-family: Ubuntu, sans-serif;
 	font-weight: normal; /* -> 7 */
 }
@@ -26,11 +27,8 @@ a{
 /*FIN Text*/
 
 body {
-    margin: auto;
-    width: 90%;
-	min-width: 800px;
-	max-width: 2100px;
-	background-color: rgba(128, 128, 128, 0.55); 
+	margin:  0px;
+	background-color: white; 
 }
 
 
@@ -39,20 +37,28 @@ body {
 /****************/
 
 header {
-    width: 100%;
-    height: 230px;
     text-align: right;
-	border:1px solid black;
+	
+	padding:10px 20%;
+	background-color: black;
+	background-clip: padding-box;
+	
+	border-bottom:27px solid transparent;
+	border-image:url(img/border_black.png) 27 27 round;
+	-webkit-border-image:url(img/border_black.png) 27 round; /* Safari 5 and older */
+	-o-border-image:url(img/border_black.png) 27 27 round; /* Opera */
 }
 
 header h1, header h2{
     text-align: center;
+	color:white;
 }
 
 header img {
     float: left;
-    width: 55px;
-    height: 55px;
+    width: 155px;
+    height: 155px;
+	margin-top: 40px;
 }
 
 
@@ -65,13 +71,17 @@ header img {
     text-align: center;
 }
 
+#content div,#content nav{
+	background-color: #8CE00C;
+}
+
 /* MENU */
-.menu_principal{
+.menu{
     display: inline-block;
     vertical-align: top;
     
     width: 20%;
-    margin: 20px 10px 20px 0;
+    margin: 20px 10px 30px 0;
     
     text-align: left;
 	border:1px solid black;
@@ -79,55 +89,48 @@ header img {
 	box-shadow: 0 0 30px #888888;
 }
 
-.menu_principal h2{
+.menu h2{
 	text-align: center;
 }
 
-.menu_principal ul {
-}
-
-.menu_principal ul li{
+.menu p{
 	margin-bottom: 10px;
-	position:relative;
-	left: -20px;
 	border-bottom: 2px black dotted;
 	list-style-type: none;
 }
 
-.menu_principal ul li a{
+.menu p a{
 	margin-left: 20px;
 }
 
-.menu_principal ul li a object{
+.menu p object{
 	margin-right: 20px;
 }
+/*FIN MENU*/
 
-
-
-.menu_secondaire{
+/*SOUS_PAGE*/
+.sous-page{
     display: inline-block;
     vertical-align: top;
-    
-    width: 0%;
-    margin: 20px 0 30px 0;
-	
+	width: 0%;
+	margin: 20px 0 30px 0;
 	overflow: hidden;
+	
 	text-align:center;
 	border:1px solid black;
 	border-radius: 10px;
 }
 
-.menu_secondaire ul li{
-	list-style-type: none;
+.sous-page .fermeture-sous-page{
+	float: right;
+	margin-right: 0px;
+	margin-top: 20px;
+	width: 40px;
+	height:40px;
 }
+/*FIN SOUS_PAGE*/
 
-#menu h2{
-    text-align: center;
-}
-/*FIN MENU*/
-
-
-#main{
+.main{
     display: inline-block;
     vertical-align: top;
     
@@ -142,7 +145,7 @@ header img {
 	border-radius: 10px;
 }
 
-#main .main-titre{
+.main .main-titre{
     display: none;
     
 	-webkit-transform: rotate(90deg);
@@ -172,8 +175,16 @@ header img {
 /*    FOOTER    */
 /****************/
 footer{
+	margin-top:30px;
     width: 100%;
-	border:1px solid black;
+	border-top:2px solid black;
+	background: black;
+	background-clip: padding-box;
+	text-align: center;
+	border-top:27px solid transparent;
+	border-image:url(img/border_black.png) 27 27 round;
+	-webkit-border-image:url(img/border_black.png) 27 round; /* Safari 5 and older */
+	-o-border-image:url(img/border_black.png) 27 27 round; /* Opera */
 }
 
 footer p{
@@ -181,13 +192,13 @@ footer p{
 	width: 29%;
 	vertical-align: top;
 	
-    text-align: center;
+	color: white;
 	padding:5px;
 }
 
 footer p:nth-child(2){
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 }
 
 
@@ -202,11 +213,13 @@ footer p:nth-child(2){
     
     
 }
+
 #searchform form label,#searchform form input{
     font-family: Ubuntu, sans-serif;
     font-size:1.1em;
     
-}
+}
+
 
 #searchform form fieldset{
     border:none;
@@ -249,6 +262,4 @@ background:#09c;
 }
 #searchform input[type="submit"]:hover{
 background:#343640;
-}.content {
-    text-align: center;
 }

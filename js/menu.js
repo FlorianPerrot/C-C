@@ -1,41 +1,72 @@
 $time_menu = 1500;
+$time_site = 2000;
 
 jQuery(document).ready(function () {
     //DOM est défini
 
-    /*INIT MENU FERME
-	$('.menu_secondaire').hide();*/
+    /*INIT MENU FERME*/
+	$('.sous-page').hide();
 
-	/* INIT MENU OUVERT*/
-    $('#main').css('width', '2%');
-    $('.menu_secondaire').css('width', '48%');
+	/* INIT MENU OUVERT
+    $('.main').css('width', '2%');
+    $('.sous-page').css('width', '48%');
 
-    $('.menu_secondaire').show();
+    $('.sous_page').show();
 	$('article').hide();
-	$('.home-name').hide();
-	$('.main-titre').show();
+	$('.article-name').hide();
+	$('.main-titre').show();*/
 	
-    function ouverture_menu() {
-		$('.main-titre').show();
-		$('.home-description').hide();
-		$('.home-name').hide();
-		$('.menu_secondaire').show();
-		$("#main").animate({width:"2%"},$time_menu);
-		$('.menu_secondaire').animate({width:"48%"},$time_menu,function(){
-		});
-    }
+    function ouverture_sous_page() {
+		$('.main-titre, .sous-page').show();
+		$('.article-description, .article-name').hide($time_menu);
+		$('.main').animate({width:"2%"},$time_menu);
+		$('.sous-page').animate({width:"48%"},$time_menu);
+    };
 
-    function fermeture_menu() {
+    function fermeture_sous_page() {
 		$('.main-titre').hide();
-		$('.home-name').show();
-		$("#main").animate({width:"50%"},$time_menu);
-		$('.menu_secondaire').animate({width:"0%"},$time_menu,function(){
-			$('.home-description').show($time_menu);
-			$(".menu_secondaire").hide();
+		$('.article-name').show();
+		$('.main).animate({width:"50%"},$time_menu);
+		$('.sous-page').animate({width:"0%"},$time_menu,function(){
+			$('.sous-page').hide();
+			$('.article-description').show($time_menu);
 		});
 		
     }
 	
-	//fermeture_menu();
-	//ouverture_menu();
+	function fermeture_site() {
+		$('#content').hide($time_site);
+	};
+	
+	function ouverture_site() {
+		$('#content').show($time_site);
+	};
+	
+	/**************/
+	/*  TEST	  */
+	/**************/
+	//ouverture_sous_page();
+	
+	/******************/
+	/*	INIT ACTIONS  */
+	/******************/
+	$('.menu .actions-sous-page').click(function(){
+		if($('.sous-page').is(':visible')){
+			fermeture_sous_page();
+		}
+		else{
+			ouverture_sous_page();
+		}
+	});
+	$('.sous-page .fermeture-sous-page').click(function(){
+			fermeture_sous_page();
+	});
+	$('footer .actions-site').click(function(){
+		if($('#content').is(':visible')){
+			fermeture_site();
+		}
+		else{
+			ouverture_site();
+		}
+	});
 });
