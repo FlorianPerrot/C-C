@@ -17,25 +17,28 @@ jQuery(document).ready(function () {
 	$('.main-titre').show();*/
 	
     function ouverture_sous_page() {
-		$('.main-titre, .sous-page').show();
-		$('.article-description, .article-name').hide($time_menu);
+		$('.main-titre').show();
+		$('article').hide($time_menu);
+		$('.sous-page').show();
 		$('.main').animate({width:"2%"},$time_menu);
 		$('.sous-page').animate({width:"48%"},$time_menu);
     };
 
     function fermeture_sous_page() {
 		$('.main-titre').hide();
-		$('.article-name').show();
-		$('.main).animate({width:"50%"},$time_menu);
+		$('article').show();
+		$('.article-description').hide();
+		$(".main").animate({width:"50%"},$time_menu);
 		$('.sous-page').animate({width:"0%"},$time_menu,function(){
-			$('.sous-page').hide();
 			$('.article-description').show($time_menu);
+			$('.sous-page').hide();
 		});
 		
     }
 	
 	function fermeture_site() {
 		$('#content').hide($time_site);
+		$('footer . actions-site').html('src','img/lock.png')
 	};
 	
 	function ouverture_site() {
@@ -45,7 +48,7 @@ jQuery(document).ready(function () {
 	/**************/
 	/*  TEST	  */
 	/**************/
-	//ouverture_sous_page();
+	ouverture_sous_page();
 	
 	/******************/
 	/*	INIT ACTIONS  */
