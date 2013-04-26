@@ -18,10 +18,11 @@
 	<body>
 		<div class="wrap">
 			<header>
-				<div class="bande-top"></div>
+				<div class="barre-top"></div>
 				<div class="header-content">
-					<div class="logo"><img alt="logo de culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/logo.jpg" width="155px" height="155px"/></div>
 					<img class="titre-asso" alt="Culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/titre-asso.gif" width="390px" height="205px"/>
+					
+					<div class="logo"><img alt="logo de culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/logo.jpg" width="155px" height="155px"/></div>
                 	<?php get_search_form( $echo ); ?>
                 </div>
 			</header>
