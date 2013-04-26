@@ -1,5 +1,6 @@
 $time_menu = 1500;
 $time_site = 2000;
+$template_directory = "wp-content/themes/C-C";
 
 jQuery(document).ready(function () {
     //DOM est défini
@@ -38,17 +39,18 @@ jQuery(document).ready(function () {
 	
 	function fermeture_site() {
 		$('#content').hide($time_site);
-		$('footer . actions-site').html('src','img/lock.png')
+		$('footer .actions-site').attr('src',$template_directory + '/img/lock.png')
 	};
 	
 	function ouverture_site() {
 		$('#content').show($time_site);
+		$('footer .actions-site').attr('src',$template_directory + '/img/unlock.png')
 	};
 	
 	/**************/
 	/*  TEST	  */
 	/**************/
-	ouverture_sous_page();
+	//ouverture_sous_page();
 	
 	/******************/
 	/*	INIT ACTIONS  */

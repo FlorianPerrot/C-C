@@ -5,18 +5,22 @@ Template Name: Home
 ?>
 <?php get_header(); ?>
 
-<section id="content">
-    <?php include 'menu.php';?>
-    <div id="main">
+<div id="content">
+    <?php include (TEMPLATEPATH . "/menu.php"); ?>
+    
+    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+    
+    <div class="bloc-content main">
 	    <?php if (have_posts()) : the_post(); ?>
             <h2 class="main-titre"><?php the_title(); ?></h2>
-			<div class="home">
-			    <h3 class="home-name"><?php the_title(); ?></h3>
-			    <article class="home-description"><?php the_content(); ?></article>
-			</div>
+			<article>
+			    <h3 class="article-name"><?php the_title(); ?></h3>
+			    <article class="article-description"><?php the_content(); ?></article>
+			</article>
 	    <?php endif; ?>
     </div>
+    
     <?php get_sidebar(); ?>
-</section>
+</div>
 
 <?php get_footer(); ?>

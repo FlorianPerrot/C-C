@@ -35,26 +35,21 @@ body {
 /****************/
 /*   HEADER     */
 /****************/
-
 header {
     text-align: center;
 	height: 260px;
 	width: 100%;
 }
-
 .header-content{
 	margin:auto;
 }
-
 .bande-top{
 	height: 30px;
-	background: white;
+	background: black;
 }
-
 header .titre-asso{
 	display: inline-block;
 }
-
 header .logo{
 	margin-top: 20px;
 	vertical-align: top;
@@ -62,7 +57,6 @@ header .logo{
 	width:400px;
 	text-align: center;
 }
-
 header .logo img{
 	margin: auto;
 }
@@ -76,7 +70,6 @@ header .logo img{
 #content {
     text-align: center;
 }
-
 #content .bloc-content{
 background: #CECEC2; /* Old browsers */
 
@@ -93,21 +86,17 @@ background: #CECEC2; /* Old browsers */
     margin: 20px 10px 30px 0;
 	background: none;
 }
-
 .menu h2{
 	text-align: center;
 }
-
 .menu p{
 	margin-bottom: 10px;
 	border-bottom: 2px black dotted;
 	list-style-type: none;
 }
-
 .menu p a{
 	margin-left: 20px;
 }
-
 .menu p object{
 	margin-right: 20px;
 }
@@ -121,7 +110,6 @@ background: #CECEC2; /* Old browsers */
 	
 	text-align:center;
 }
-
 .sous-page .fermeture-sous-page{
 	float: right;
 	margin-right: 0px;
@@ -139,7 +127,6 @@ background: #CECEC2; /* Old browsers */
     
 	padding: 10px;
 }
-
 .main .main-titre{
     display: none;
     
@@ -149,7 +136,6 @@ background: #CECEC2; /* Old browsers */
 	-ms-transform: rotate(90deg);
     sand-transform: rotate(90deg);
 }
-
 .side {
    
     width: 20%;
@@ -180,7 +166,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efe7b3', end
 
 border-radius: 60px;
 }
-
 .footer-content p{
 	display: inline-block;
 	width: 29%;
@@ -189,15 +174,10 @@ border-radius: 60px;
 	color: black;
 	padding:5px;
 }
-
 .footer-content p:nth-child(2){
 	border-left: 1px solid black;
 	border-right: 1px solid black;
 }
-
-
-
-
 
 /****************************/
 /* 		 SearchForm 		*/
@@ -206,18 +186,15 @@ border-radius: 60px;
 	display: inline-block;
 	width:400px;
 }
-
 #searchform form label,#searchform form input{
     font-family: Ubuntu, sans-serif;
     font-size:1.1em;   
 }
-
 #searchform form fieldset{
     border:none;
     padding: 0px;
 	width:395px;
 }
-
 #searchform input[type="text"]{
 border:none;
 margin-right: -4px;
