@@ -35,7 +35,7 @@ body {
 /****************/
 header {
     text-align: center;
-	height: 320px;
+	height: 360px;
 	width: 100%;
 	
 	background: url(img/background_gite.jpg), black;
@@ -59,15 +59,15 @@ header .titre-asso{
 
 header .logo{
 	position:absolute;
-	margin-top:50px;
-	margin-left:25%;
+	margin-top:80px;
+	margin-left:11%;
 	width:155px;
 	left:-77px;
 }
 #searchform {
 	position:absolute;
-	margin-top:200px;
-	margin-right:25%;
+	margin-top:260px;
+	margin-right:17%;
 	width:400px;
 	height: 30px;
 	right:-200px;
