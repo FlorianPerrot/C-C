@@ -1,4 +1,4 @@
-$time_menu = 1500;
+$time_menu = 1000;
 $time_site = 2000;
 $template_directory = "wp-content/themes/C-C";
 
@@ -21,15 +21,16 @@ jQuery(document).ready(function () {
 		$('.main-titre').show();
 		$('article').hide($time_menu);
 		$('.sous-page').show();
-		$('.main').animate({width:"2%"},$time_menu);
-		$('.sous-page').animate({width:"48%"},$time_menu);
+		
+		$('.main').animate({width:"9%"},$time_menu);
+		$('.sous-page').animate({width:"89%"},$time_menu);
     };
 
     function fermeture_sous_page() {
 		$('.main-titre').hide();
 		$('article').show();
 		$('.article-description').hide();
-		$(".main").animate({width:"50%"},$time_menu);
+		$('.main').animate({width:"98%"},$time_menu);
 		$('.sous-page').animate({width:"0%"},$time_menu,function(){
 			$('.article-description').show($time_menu);
 			$('.sous-page').hide();
