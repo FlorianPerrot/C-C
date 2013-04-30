@@ -6,9 +6,9 @@ Template Name: Home
 <?php get_header(); ?>
 
 <div id="content">
-    <?php include (TEMPLATEPATH . "/menu.php"); ?>
+    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
     
-    <div class="bloc-content center">
+    <div class="bloc-content bloc-center">
 	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
 	    
 	    <section class="main">
