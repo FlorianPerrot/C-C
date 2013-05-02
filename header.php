@@ -22,7 +22,7 @@
 				<div class="header-content">
 					<a href="<?php echo network_site_url( '/' );?>"><img class="titre-asso" alt="Culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/titre-asso.gif" width="390px" height="205px"/>
 				
-					<div class="logo"><a href="<?php echo network_site_url( '/' );?>"><img alt="logo de culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/logo.jpg" width="100px" height="100px"/></a></div>
+					<div class="logo"><a href="<?php echo network_site_url( '/' );?>"><img alt="logo de culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/logo.png" width="150px" height="150px"/></a></div>
                 	<?php get_search_form( $echo ); ?>
                 </div>
 			</header>

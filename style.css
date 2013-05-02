@@ -127,7 +127,7 @@ header .logo{
 nav a{
 	display:block;
 	height:65px;
-	margin-bottom:10px;
+	margin-bottom:20px;
 	text-align:center;
 }
 nav a p{
@@ -192,7 +192,9 @@ nav a b{
 	height:40px;
 }
 
-.sous-page a{}
+.sous-page .menu-secondaire{
+	padding: 20px 20px 20px 0; 
+}
 
 /*FIN SOUS_PAGE*/
 
@@ -214,7 +216,7 @@ nav a b{
     z-index: 1;
     width: 20%;
 	margin: 40px 0 30px 10px;
-	text-align: left;
+	text-align: center;
 	min-height: 200px;
 	background: white; /* Old browsers */
 	box-shadow: 0 2px 2px #888888;
@@ -331,6 +333,106 @@ background: linear-gradient(to bottom,  rgba(229,230,150,1) 0%,rgba(209,211,96,1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e696', endColorstr='#d1d360',GradientType=0 ); /* IE6-9 */
 
 }
+
+/* GALERIE */
+#mini-galerie{
+		width:200px;
+		overflow:hidden;
+		display: inline-block;
+}
+#mini-galerie #demoWrap{
+position:relative;
+width:400px;
+height:300px;
+}
+#mini-galerie #demoWrap a.ancre{
+display:none;
+}
+#mini-galerie #demoWrap #imgs{
+/*transition*/
+-webkit-transition:all 1s ease;
+   -moz-transition:all 1s ease;
+    -ms-transition:all 1s ease;
+     -o-transition:all 1s ease;
+        transition:all 1s ease;
+}
+#mini-galerie #demoWrap #imgs ul li{
+position:relative;
+float:left;
+text-align:center;
+width:200px;
+height:310px;
+padding:30px 0 0 0;
+list-style:none;
+}
+#mini-galerie #demoWrap #liens ul{
+position:absolute;
+z-index:100;
+height:10px;
+width:64px;
+top:10px;
+left:100px;
+}
+#mini-galerie #demoWrap #liens ul li{
+position:relative;
+float:left;
+width:10px;
+height:10px;
+list-style:none;
+margin:0px 3px;
+}
+#mini-galerie #demoWrap #liens ul li a,
+#mini-galerie #demoWrap #wrap2:target ~ #liens ul li:nth-child(1) a{
+display:block;
+padding:10px 0 0 0;
+height:0;
+width:10px;
+overflow:hidden;
+background:#555;
+/*linear-gradient*/
+background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.8))),#888;
+background:-webkit-linear-gradient(transparent,rgba(0,0,0,.8)),#888;
+background:   -moz-linear-gradient(transparent,rgba(0,0,0,.8)),#888;
+background:    -ms-linear-gradient(transparent,rgba(0,0,0,.8)),#888;
+background:     -o-linear-gradient(transparent,rgba(0,0,0,.8)),#888;
+background:        linear-gradient(transparent,rgba(0,0,0,.8)),#888;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+/*box-shadow*/
+-webkit-box-shadow:0px 0px 2px #1b1e22;
+   -moz-box-shadow:0px 0px 2px #1b1e22;
+        box-shadow:0px 0px 2px #1b1e22;
+}
+#mini-galerie #demoWrap #liens ul li a:hover,
+#mini-galerie #demoWrap #liens ul li a:focus{
+/*linear-gradient*/
+background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,1))),#888;
+background:-webkit-linear-gradient(transparent,rgba(0,0,0,1)),#888;
+background:   -moz-linear-gradient(transparent,rgba(0,0,0,1)),#888;
+background:    -ms-linear-gradient(transparent,rgba(0,0,0,1)),#888;
+background:     -o-linear-gradient(transparent,rgba(0,0,0,1)),#888;
+background:        linear-gradient(transparent,rgba(0,0,0,1)),#888;
+}
+/* :target */
+/* lien1 */
+#mini-galerie #demoWrap #wrap1:target ~ #imgs{
+margin-left:0px;
+}
+#mini-galerie #demoWrap #wrap2:target ~ #imgs{
+margin-left:-200px;
+}
+#mini-galerie #demoWrap #liens ul li:nth-child(1) a,
+#mini-galerie #demoWrap #wrap1:target ~ #liens ul li a[href="#wrap1"],
+#mini-galerie #demoWrap #wrap2:target ~ #liens ul li a[href="#wrap2"]{
+
+-webkit-box-shadow:0 -1px 0 rgba(255,255,255,.5) inset;
+   -moz-box-shadow:0 -1px 0 rgba(255,255,255,.5) inset;
+        box-shadow:0 -1px 0 rgba(255,255,255,.5) inset;
+}
+
+
 /* ANIMATION */
 @keyframes moveMenu
 {

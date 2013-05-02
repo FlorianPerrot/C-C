@@ -3,7 +3,7 @@ $time_site = 2000;
 $template_directory = "wp-content/themes/C-C";
 
 var tab_color_menu = ["#375D81","#ff6600","#d11001","#019e59","#2d9500", "#d6191f"];/* Taille du tableau = nombre de lien dans le menu*/
-var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66"];
+var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66","#ffEE88"];
 
 var tab_pos_menu = [20,10,5,10,20,30];/* EN %*/
 var tab_pos_sous_menu =[20,20,10]; /* EN %*/
