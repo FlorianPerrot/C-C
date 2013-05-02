@@ -1,7 +1,16 @@
 <?php get_header(); ?>
-<div class="main category">
-	<h1>Catégorie : <?php single_cat_title(); ?></h1>
-	<?php get_template_part('loop'); ?>
+
+<div id="content">
+    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
+    
+    <div class="bloc-content bloc-center">
+	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+	    
+	    <section class="main">
+			<?php get_template_part('loop'); ?>
+	    </section>
+    </div>
+    <?php get_sidebar(); ?>
 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

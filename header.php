@@ -7,7 +7,7 @@
         <!-- CSS -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
         <!-- Police Ubuntu -->
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" type="text/css" href="js/police.css"><!-- http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin -->
 
         <!-- JavaScript -->
         <script src="<?php echo get_bloginfo('template_directory');?>/js/jquery.min.js"></script>
