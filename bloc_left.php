@@ -13,7 +13,7 @@
 			<a href="#"><b><img alt="article" src="<?php echo get_bloginfo('template_directory');?>/img/gallerie.png" width="35px" height="35px"/></b><p>Galerie</p></a>
 			<a href="#"><b><img alt="forum" src="<?php echo get_bloginfo('template_directory');?>/img/forum.png" width="35px" height="35px"/></b><p>Forum</p></a>
 			<a href="#"><b><img alt="article" src="<?php echo get_bloginfo('template_directory');?>/img/article.png" width="35px" height="35px"/></b><p>Articles</p></a>
-			<a href="#"><b><img alt="document" src="<?php echo get_bloginfo('template_directory');?>/img/document.png" width="35px" height="35px"/></b><p>Contact</p></a>
+			<a href="#"><b><img alt="contact" src="<?php echo get_bloginfo('template_directory');?>/img/contact.png" width="35px" height="35px"/></b><p>Contact</p></a>
 		</div>
 	</nav>			
 

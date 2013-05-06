@@ -19,14 +19,7 @@ jQuery(document).ready(function () {
     /*INIT MENU FERME*/
 	$('.sous-page').hide();
 	$('.main-titre').hide();
-	/* INIT MENU OUVERT
-    $('.main').css('width', '2%');
-    $('.sous-page').css('width', '48%');
-
-    $('.sous_page').show();
-	$('article').hide();
-	$('.article-name').hide();
-	$('.main-titre').show();*/
+	$('.sous-page nav p').hide();
 	
     function ouverture_sous_page(taille_ouverture_menu) {
 		$('.sous-page').show();

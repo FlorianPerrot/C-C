@@ -20,17 +20,25 @@ h1, h2, h3{
 h1 {
 	font-size: 3em; /* -> 8 */
 }
+.title, .title a{
+	font-family: Lucida Handwriting;
+	text-decoration:none;
+	padding: 10px;
+	color: black; 
+}
 h2 {font-size: 1.8em;}
 h3 {font-size: 1.2em;}
 h4 {font-size: 1em;}
 a{
     font-family: Ubuntu, sans-serif;
 }
-/*FIN Text*/
+
 
 body {
 	margin:  auto;
 	background: #CECEC2;
+	min-width: 1024px;
+	max-width: 2048px;
 }
 
 /****************/
@@ -40,54 +48,45 @@ header {
     text-align: center;
 	height: 360px;
 	width: 100%;
+	max-width: 2048px;
+	min-width: 1024px;
 	
 	background: url(img/background_gite.jpg), black;
 	background-size:1024px 768px;
 	background-repeat:no-repeat;
 	background-position:center;
 }
-.header-content{
-	margin:auto;
-}
 .barre-top{
 	height: 30px;
-	background: white;
 }
-header .titre-asso{
-	width:390px;
-	left:-195px;
+header .bloc-titre{
 	position:absolute;
 	margin-left:50%;
+	margin-top:10px;
+	left: -195px;
+	
 }
-header .logo{
-	position:absolute;
+header .titre-asso{
+	width: 390px;
+	position: absolute;
+}
+header .bloc-logo{
+	position: absolute;
+	left: 11%;
 	margin-top:80px;
-	margin-left:11%;
-	width:155px;
-	left:-77px;
-}
-#searchform {
-	position:absolute;
-	margin-top:260px;
-	margin-right:17%;
-	width:400px;
-	height: 30px;
-	right:-200px;
 }
 
 
-/****************/
-/*    CONTENT   */
-/****************/
-
+/*************/
+/*  CONTENT  */
+/*************/
 #content {
     text-align: center;
 }
-#content .bloc-content{
+.bloc-content{
     display: inline-block;
     vertical-align: top;
 }
-
 .bloc-left{
 	position:relative;
 	z-index: 1;
@@ -95,7 +94,6 @@ header .logo{
     margin: 40px 10px 30px 0;
 	text-align: right;
 }
-
 .bloc-left h2{
 	position:relative;
 	z-index:6;
@@ -114,7 +112,7 @@ header .logo{
 }
 
 /* MENU */
-.onglets-content{
+.menu .onglets-content{
 	margin:auto;
 	width:75%;
 	position:relative;
@@ -124,6 +122,7 @@ header .logo{
 	margin-top:-18px;
 	box-shadow: 0 0 2px black;
 }
+
 nav a{
 	display:block;
 	height:65px;
@@ -139,6 +138,7 @@ nav a p{
 	padding: 13px 10px 13px 15px;
 	border-radius: 0 10px 10px 0;
 	font-family: Ubuntu, sans-serif;
+	min-width: 100px;
 }
 nav a b{
 	position:relative;
@@ -150,25 +150,8 @@ nav a b{
 	border-radius: 0 50% 50% 50%;
 	box-shadow: 0 2px 5px black;
 }
-/*FIN MENU*/
 
-#content .bloc-center{
-	position:relative;
-	z-index: 0;
-	width: 55%;
-	padding: 20px 11% 10px 11%;
-	margin: 20px -10% 30px -10%;
-	background: white; /* Old browsers */
-	border-radius: 100px;
-	text-align: center;
-}
-
-.bloc-center section{
-	vertical-align: top;
-	display: inline-block;
-}
-
-/*SOUS_PAGE*/
+/* SOUS-PAGE*/
 .sous-page{
 	position:relative;
 	z-index:10;
@@ -176,28 +159,31 @@ nav a b{
 	overflow: hidden;
 	text-align:left;
 	box-shadow: 5px 0 6px #888;
-	border-radius: 0 300px 300px 0;
+	border-radius: 0 50% 50% 0;
 	margin:160px 30px 0 -70px;
 	padding: 10px 0;
+	background: white;
 	
 }
-
-.sous-page .fermeture-sous-page{
-	position:relative;
-	z-index:2;
-	float: right;
-	margin-right: 0px;
-	margin-top: 20px;
-	width: 40px;
-	height:40px;
-}
-
 .sous-page .menu-secondaire{
-	padding: 20px 20px 20px 0; 
+	padding: 50px 0 50px 0;
 }
 
-/*FIN SOUS_PAGE*/
-
+/* CONTENT */
+.bloc-center{
+	position:relative;
+	z-index: 0;
+	width: 55%;
+	padding: 20px 11% 10px 11%;
+	margin: 20px -10% 30px -10%;
+	/*background: white; /* Old browsers */
+	border-radius: 100px;
+	text-align: center;
+}
+.bloc-center > section{
+	vertical-align: top;
+	display: inline-block;
+}
 .main{
 	text-align:left;
     min-height: 390px;
@@ -211,6 +197,8 @@ nav a b{
 	-ms-transform: rotate(90deg);
     sand-transform: rotate(90deg);
 }
+
+/* SIDEBAR */
 .side {
 	position:relative;
     z-index: 1;
@@ -246,8 +234,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e696', end
 
 border-radius: 0 0 60px 60px;
 }
-
-
 .footer-content p{
 	display: inline-block;
 	width: 29%;
@@ -258,9 +244,16 @@ border-radius: 0 0 60px 60px;
 }
 
 
-/****************************/
-/* 		 SearchForm 		*/
-/****************************/
+/****************/
+/*  SearchForm  */
+/****************/
+#searchform {
+	position: absolute;
+	right: 1%;
+	margin-top:260px;
+	width:400px;
+	height: 30px;
+}
 #searchform form input{
     font-family: Ubuntu, sans-serif;
     font-size:1.1em;   
@@ -299,7 +292,6 @@ background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1)
 background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
-
 #searchform input[type="submit"]{
 display: inline-block;
 vertical-align: middle;
@@ -334,7 +326,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e696', end
 
 }
 
+/***********/
 /* GALERIE */
+/***********/
 #mini-galerie{
 		width:200px;
 		overflow:hidden;
@@ -415,8 +409,6 @@ background:    -ms-linear-gradient(transparent,rgba(0,0,0,1)),#888;
 background:     -o-linear-gradient(transparent,rgba(0,0,0,1)),#888;
 background:        linear-gradient(transparent,rgba(0,0,0,1)),#888;
 }
-/* :target */
-/* lien1 */
 #mini-galerie #demoWrap #wrap1:target ~ #imgs{
 margin-left:0px;
 }
@@ -433,7 +425,84 @@ margin-left:-200px;
 }
 
 
-/* ANIMATION */
+/**********/
+/*  DATE  */
+/**********/
+.date{ 
+	position:relative;
+	padding:45px 14px 0px 0px;
+	margin: auto;
+} 
+.date .month{
+    text-transform: uppercase;
+    font-size:25px;
+    margin: -5px 5px 0 5px;
+}
+.date .day{
+	font-size:35px;
+	line-height:35px;
+	position:absolute; left:5px; top:10px;
+}
+.date .year{ 
+	display:block; 
+	position:absolute; 
+	right:5px; 
+	top:15px;
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);			
+}
+/**********/
+/*  POST  */
+/**********/
+.post{
+	min-height: 150px;
+	border: 4px solid #2d9500;
+	padding: 10px;
+	margin-top: 50px;
+	background: white;
+	border-radius: 0 50px 0 0;
+}
+
+.info{
+	color: white;
+	float:right;
+	padding: 7px; 
+	background: rgb(143,200,0);
+	border-radius: 50% 50% 50% 0;
+}
+
+.post .more-link{
+	display: block;
+	padding: 10px 10px 5px 10px;
+	margin-left: -10px;
+	margin-bottom: -10px;
+	background: #2d9500;
+	border-radius: 0 30px 0 0;
+	color: white;
+	width: 120px;
+}
+.post ul li{
+	margin-left: 40px;
+}
+/*************/
+/*  Galerie  */
+/*************/
+.gallery-template{
+	border: 4px solid #d11001;
+}
+.gallery-info{
+	background: #F23021;
+}
+.gallery_box li{
+	border-top: 1px dotted black;
+}
+.gallery_box li:last-of-type{
+	border-bottom: 1px dotted black;
+}
+
+/***************/
+/*  ANIMATION  */
+/***************/
 @keyframes moveMenu
 {
 	from{}

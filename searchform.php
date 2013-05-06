@@ -1,4 +1,4 @@
-<section id="searchform">
+<section id="searchform" class="bloc-searchform">
     <form action="<?php bloginfo('url'); ?>" method="get">
         <fieldset>
             <p>

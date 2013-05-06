@@ -1,18 +1,23 @@
 <div id="main">
 <?php if (have_posts()) : ?>
-	<p class="title">
-	</p>
+	<p class="title"></p>
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="post">
-		<h3 class="post-title">
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		</h3>
-		<p class="post-info">
-			Posté le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?>.
-		</p>
-		<div class="post-content">
+			<div class="info post-info">
+				<div class="date post-date">
+				  <span class="day"><?php the_time('d') ?></span> 
+				  <span class="month"><?php the_time('M') ?></span> 
+				  <span class="year"><?php the_time('Y') ?></span>
+				</div>
+			</div>
+
+			<h2 class="title post-title">
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			</h2>
+
+			<div class="post-content">
 			<?php the_content(); ?>
-		</div>
+			</div>
 		</div>
 	<?php endwhile; ?>
 <?php else : ?>
