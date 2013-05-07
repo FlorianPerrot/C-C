@@ -1,7 +1,6 @@
-<div id="main">
 <?php if (have_posts()) : ?>
-	<p class="title"></p>
 	<?php while (have_posts()) : the_post(); ?>
+	<?php ?>
 		<div class="post">
 			<div class="info post-info">
 				<div class="date post-date">
@@ -25,4 +24,3 @@
 		Il n'y a pas de Post à afficher !
 	</p>
 <?php endif; ?>
-</div>

@@ -4,7 +4,7 @@
 		<div class="vertical-bande"></div>
 		<div class="onglets-content">	
 			<a href="#"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/accueil.png" width="35px" height="35px"/></b><p>Accueil</p></a>
-			<a class="actions-sous-page"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/ico-logo.png" width="35px" height="35px"/></b><p>Présentation</p></a>
+			<a href="#" class="actions-sous-page" onclick="return false;"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/ico-logo.png" width="35px" height="35px"/></b><p>Présentation</p></a>
 				<!-- MENU SECONDAIRE
 				Objectif
 				Tourisme adapté

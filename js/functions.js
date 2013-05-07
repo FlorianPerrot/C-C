@@ -8,22 +8,25 @@ var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66","#ffEE88"];
 var tab_pos_menu = [20,10,5,10,20,30];/* EN %*/
 var tab_pos_sous_menu =[20,20,10]; /* EN %*/
 
+var tab_nom_sous_menu = ["objectif","pole-tourisme-adapte","pole-integration"]; 
+
 $taille_menu = tab_color_menu.length;
 $taille_sous_menu = tab_color_sous_menu.length;
 
-var elem_menu = 1;
+/*  FUNCTION EXTERN  */
+function border_presentation(nom_page) {
+		for(var x=0;x<=$taille_sous_menu;x+=1){
+			if(tab_nom_sous_menu[x] == nom_page){
+				$('.'+nom_page).css('border','4px solid '+tab_color_sous_menu[x]);
+				break;
+			}
+		}
+	};
 
-jQuery(document).ready(function () {
-    //DOM est défini
-
-    /*INIT MENU FERME*/
-	$('.sous-page').hide();
-	$('.main-titre').hide();
-	$('.sous-page nav p').hide();
-	
     function ouverture_sous_page(taille_ouverture_menu) {
 		$('.sous-page').show();
-		$('.main').animate({width:(96-taille_ouverture_menu)+'%'},$time_menu);
+		$('.bloc-center').animate({texte-align:"left"},$time_menu);
+		$('.main').animate({width:(95-taille_ouverture_menu)+'%'},$time_menu);
 		$('.sous-page').animate({width:taille_ouverture_menu+'%'},$time_menu,function(){
 			$('.sous-page nav p').show();
 		});
@@ -31,9 +34,10 @@ jQuery(document).ready(function () {
 
     function fermeture_sous_page() {
     	$('.sous-page nav p').hide();
-		$('.main').animate({width:"96%"},$time_menu);
+		$('.main').animate({width:"95%"},$time_menu);
 		$('.sous-page').animate({width:"0%"},$time_menu,function(){
 			$('.sous-page').hide();
+			$('.bloc-center').animate({text-align:"center"},$time_menu);
 		});
     }
 	
@@ -87,6 +91,16 @@ jQuery(document).ready(function () {
 			$('.sous-page nav a:nth-of-type('+x+') p').css('background',tab_color_sous_menu[x-1]);	
 		}
 	}
+	
+jQuery(document).ready(function () {
+    //DOM est défini
+
+    /*INIT MENU FERME*/
+	$('.sous-page').hide();
+	$('.main-titre').hide();
+	$('.sous-page nav p').hide();
+	
+
 	
 	/**************/
 	/*  TEST	  */

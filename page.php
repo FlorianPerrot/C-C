@@ -6,6 +6,7 @@
 		    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
 		    
 		    <section class="main">
+		    	<!--
 				<?php if (have_posts()) : ?>
 					<?php while (have_posts()) : the_post(); ?>
 						<div class="post">
@@ -16,6 +17,7 @@
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
+				-->
 		    </section>
 	    </div>
 	    

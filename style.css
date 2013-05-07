@@ -26,13 +26,15 @@ h1 {
 	padding: 10px;
 	color: black; 
 }
+.main ul{
+	margin-left: 35px;
+}
 h2 {font-size: 1.8em;}
 h3 {font-size: 1.2em;}
 h4 {font-size: 1em;}
 a{
     font-family: Ubuntu, sans-serif;
 }
-
 
 body {
 	margin:  auto;
@@ -91,7 +93,7 @@ header .bloc-logo{
 	position:relative;
 	z-index: 1;
     width: 20%;
-    margin: 40px 10px 30px 0;
+    margin: 40px 0 30px 0;
 	text-align: right;
 }
 .bloc-left h2{
@@ -123,6 +125,9 @@ header .bloc-logo{
 	box-shadow: 0 0 2px black;
 }
 
+nav h2{
+	margin-top: 0;
+}
 nav a{
 	display:block;
 	height:65px;
@@ -160,7 +165,7 @@ nav a b{
 	text-align:left;
 	box-shadow: 5px 0 6px #888;
 	border-radius: 0 50% 50% 0;
-	margin:160px 30px 0 -70px;
+	margin:160px 16px 0 -16px;
 	padding: 10px 0;
 	background: white;
 	
@@ -174,8 +179,7 @@ nav a b{
 	position:relative;
 	z-index: 0;
 	width: 55%;
-	padding: 20px 11% 10px 11%;
-	margin: 20px -10% 30px -10%;
+	margin: 50px 0 30px 0;
 	/*background: white; /* Old browsers */
 	border-radius: 100px;
 	text-align: center;
@@ -188,7 +192,7 @@ nav a b{
 	text-align:left;
     min-height: 390px;
 	overflow: hidden;
-	width:98%;
+	width:95%;
 }
 .main .main-titre{
 	-webkit-transform: rotate(90deg);
@@ -203,7 +207,7 @@ nav a b{
 	position:relative;
     z-index: 1;
     width: 20%;
-	margin: 40px 0 30px 10px;
+	margin: 40px 0 30px 0;
 	text-align: center;
 	min-height: 200px;
 	background: white; /* Old browsers */
@@ -327,7 +331,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e696', end
 }
 
 /***********/
-/* GALERIE */
+/* Mini-GALERIE */
 /***********/
 #mini-galerie{
 		width:200px;
@@ -458,7 +462,7 @@ margin-left:-200px;
 	min-height: 150px;
 	border: 4px solid #2d9500;
 	padding: 10px;
-	margin-top: 50px;
+	margin-bottom: 50px;
 	background: white;
 	border-radius: 0 50px 0 0;
 }
@@ -481,9 +485,6 @@ margin-left:-200px;
 	color: white;
 	width: 120px;
 }
-.post ul li{
-	margin-left: 40px;
-}
 /*************/
 /*  Galerie  */
 /*************/
@@ -499,6 +500,24 @@ margin-left:-200px;
 .gallery_box li:last-of-type{
 	border-bottom: 1px dotted black;
 }
+/******************/
+/*  Presentation  */
+/******************/
+.presentation{
+	min-height: 400px;
+	background: white;
+	padding: 10px;
+}
+.presentation h2{
+	text-align:center;
+}
+.presentation-thumbnail img{
+	border: 3px solid #888888;
+	float: left;
+	margin-right: 10px;
+	width: 200px;
+	height: 200px;
+} 
 
 /***************/
 /*  ANIMATION  */

@@ -10,8 +10,8 @@
         <link rel="stylesheet" type="text/css" href="js/police.css"><!-- http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin -->
 
         <!-- JavaScript -->
-        <script src="<?php echo get_bloginfo('template_directory');?>/js/jquery.min.js"></script>
-        <script src="<?php echo get_bloginfo('template_directory');?>/js/functions.js"></script>
+        <script type="text/javascript" language="JavaScript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript" src="<?php echo get_bloginfo('template_directory');?>/js/functions.js"></script>
 
 		<?php wp_head(); ?>
 	</head>
