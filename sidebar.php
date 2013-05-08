@@ -11,8 +11,8 @@
 	         </div>
 	         <div id="imgs">
 	         	<ul>
-	            	<li><img src="<?php echo get_bloginfo('template_directory');?>/img/galerie/gite1.jpg" alt="Image de nature abstraite" width='200' height='150' style='height:150px;width:200px;' /></li>
-	                <li><img src="<?php echo get_bloginfo('template_directory');?>/img/galerie/gite2.jpg" alt="Image de nature abstraite" width='200' height='150' style='height:150px;width:200px;' /></li>
+	            	<li><img src="<?php echo get_bloginfo('template_directory');?>/img/galerie/gite1.jpg" alt="Image de nature abstraite" width='150' height='94' style='height:94px;width:150px;' /></li>
+	                <li><img src="<?php echo get_bloginfo('template_directory');?>/img/galerie/gite2.jpg" alt="Image de nature abstraite" width='150' height='94' style='height:94px;width:150px;' /></li>
 	            </ul>
 	         </div>
 		</div>

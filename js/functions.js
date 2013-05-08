@@ -10,10 +10,24 @@ var tab_pos_sous_menu =[20,20,10]; /* EN %*/
 
 var tab_nom_sous_menu = ["objectif","pole-tourisme-adapte","pole-integration"]; 
 
+var tab_margin_menu_secondaire = ['85px','18px','0px','-18px'];
+var tab_radius_menu_secondaire = ['0%','50%','50%','0%'];
+var tab_margin_parentaires = ['50px','0px','0px','0px'];
+var tab_radius_pare,taires =['0','0','0','0'];
+
+
 $taille_menu = tab_color_menu.length;
 $taille_sous_menu = tab_color_sous_menu.length;
 
 /*  FUNCTION EXTERN  */
+function cal_taille_bloc_center(){
+	return $('body').width()-$('.bloc-left').width()-$('.side').width()-20;
+}
+
+function tab_to_css(tab_of_css){
+	return tab_of_css[0]+' '+tab_of_css[1]+' '+tab_of_css[2]+' '+tab_of_css[3];
+}
+
 function border_presentation(nom_page) {
 		for(var x=0;x<=$taille_sous_menu;x+=1){
 			if(tab_nom_sous_menu[x] == nom_page){
@@ -21,44 +35,48 @@ function border_presentation(nom_page) {
 				break;
 			}
 		}
-	};
+}
 
-    function ouverture_sous_page(taille_ouverture_menu) {
+function ouverture_sous_page(taille_ouverture_menu, tab_margin, tab_radius) {
+		$('.sous-page').css("margin",tab_to_css(tab_margin))
+		.css('border-radius',tab_to_css(tab_radius));
+		$('.menu-secondaire').show();
 		$('.sous-page').show();
-		$('.bloc-center').animate({texte-align:"left"},$time_menu);
 		$('.main').animate({width:(95-taille_ouverture_menu)+'%'},$time_menu);
 		$('.sous-page').animate({width:taille_ouverture_menu+'%'},$time_menu,function(){
 			$('.sous-page nav p').show();
 		});
-    };
+}
 
-    function fermeture_sous_page() {
+function fermeture_sous_page() {
     	$('.sous-page nav p').hide();
 		$('.main').animate({width:"95%"},$time_menu);
 		$('.sous-page').animate({width:"0%"},$time_menu,function(){
 			$('.sous-page').hide();
-			$('.bloc-center').animate({text-align:"center"},$time_menu);
+			$('.menu-secondaire').hide();
 		});
-    }
+}
 	
-	function fermeture_site() {
+function fermeture_site() {
 		$('#content').hide($time_site);
-		$('footer .actions-site').attr('src',$template_directory + '/img/lock.png')
-	};
+		$('footer .actions-site').attr('src',$template_directory + '/img/lock.png');
+}
 	
-	function ouverture_site() {
+function ouverture_site() {
 		$('#content').show($time_site);
-		$('footer .actions-site').attr('src',$template_directory + '/img/unlock.png')
-	};
+		$('footer .actions-site').attr('src',$template_directory + '/img/unlock.png');
+}
+
+function init(){
+		/* Mise en place de la taille du bloc central */
 	
-	function init(){
 		/* BOUTON ET FOCUS*/
-		$('.menu .actions-sous-page').click(function(){
+		$('.menu .actions-menu-secondaire').click(function(){
 			if($('.sous-page').is(':visible')){
 				fermeture_sous_page();
 			}
 			else{
-				ouverture_sous_page(40);
+				ouverture_sous_page(40,tab_margin_menu_secondaire,tab_radius_menu_secondaire);
 			}
 		});
 		$('.sous-page .fermeture-sous-page').click(function(){
@@ -90,17 +108,17 @@ function border_presentation(nom_page) {
 			$('.sous-page nav a:nth-of-type('+x+') b').css('background',tab_color_sous_menu[x-1]);
 			$('.sous-page nav a:nth-of-type('+x+') p').css('background',tab_color_sous_menu[x-1]);	
 		}
-	}
-	
-jQuery(document).ready(function () {
+}
+
+jQuery(document).ready( function () {
     //DOM est défini
+	alert($('body').width());
+	$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
 
     /*INIT MENU FERME*/
 	$('.sous-page').hide();
 	$('.main-titre').hide();
 	$('.sous-page nav p').hide();
-	
-
 	
 	/**************/
 	/*  TEST	  */

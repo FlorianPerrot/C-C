@@ -1,6 +1,5 @@
 <?php if (have_posts()) : ?>
 	<?php while (have_posts()) : the_post(); ?>
-	<?php ?>
 		<div class="post">
 			<div class="info post-info">
 				<div class="date post-date">
