@@ -5,15 +5,12 @@ $template_directory = "wp-content/themes/C-C";
 var tab_color_menu = ["#375D81","#ff6600","#d11001","#019e59","#2d9500", "#d6191f"];/* Taille du tableau = nombre de lien dans le menu*/
 var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66","#ffEE88"];
 
-var tab_pos_menu = [20,10,5,10,20,30];/* EN %*/
-var tab_pos_sous_menu =[20,20,10]; /* EN %*/
-
 var tab_nom_sous_menu = ["objectif","pole-tourisme-adapte","pole-integration"]; 
 
-var tab_margin_menu_secondaire = ['85px','18px','0px','-18px'];
+var tab_margin_menu_secondaire = ['85px','25px','0px','-25px'];
 var tab_radius_menu_secondaire = ['0%','50%','50%','0%'];
 var tab_margin_parentaires = ['50px','0px','0px','0px'];
-var tab_radius_pare,taires =['0','0','0','0'];
+var tab_radius_parentaires =['0','0','0','0'];
 
 
 $taille_menu = tab_color_menu.length;
@@ -68,7 +65,16 @@ function ouverture_site() {
 }
 
 function init(){
+   		/*INIT MENU FERME*/
+		$('.sous-page').hide();
+		$('.main-titre').hide();
+		$('.sous-page nav p').hide();		
+		
 		/* Mise en place de la taille du bloc central */
+		$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
+		$(window).resize(function(){
+			$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
+		});
 	
 		/* BOUTON ET FOCUS*/
 		$('.menu .actions-menu-secondaire').click(function(){
@@ -90,7 +96,6 @@ function init(){
 				ouverture_site();
 			}
 		});
-		
 		$('.menu a').mouseenter(function(){
 			$(this).animate({"text-align":"right"},500);
 		})
@@ -98,12 +103,11 @@ function init(){
 				$(this).animate({"left":"auto"},500);
 		});
 		
-		/* Traitement menu */
+		/* Traitement couleur du menu */
 		for(var x=1;x<=$taille_menu;x+=1){
 			$('.menu a:nth-of-type('+x+') b').css('background',tab_color_menu[x-1]);
 			$('.menu a:nth-of-type('+x+') p').css('background',tab_color_menu[x-1]);	
 		}
-		
 		for(var x=1;x<=$taille_sous_menu;x+=1){
 			$('.sous-page nav a:nth-of-type('+x+') b').css('background',tab_color_sous_menu[x-1]);
 			$('.sous-page nav a:nth-of-type('+x+') p').css('background',tab_color_sous_menu[x-1]);	
@@ -112,18 +116,6 @@ function init(){
 
 jQuery(document).ready( function () {
     //DOM est défini
-	alert($('body').width());
-	$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
-
-    /*INIT MENU FERME*/
-	$('.sous-page').hide();
-	$('.main-titre').hide();
-	$('.sous-page nav p').hide();
-	
-	/**************/
-	/*  TEST	  */
-	/**************/
-	//ouverture_sous_page();
 	
 	/******************/
 	/*	INIT ACTIONS  */

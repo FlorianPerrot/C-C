@@ -1,6 +1,6 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-
+add_action('send_headers','site_router');
 add_action('init', 'my_init');
 function my_init()
 {
@@ -13,4 +13,14 @@ function my_init()
 	  'hierarchical' => false,
 	  'supports' => array('title', 'editor', 'thumbnail')
 	));
+}
+function site_router(){
+	$root = str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+	$url = str_replace($root, '', $_SERVER['REQUEST_URI']);
+	$url = explode('/', $url);
+	if(count($url) == 1 && $url[0] == 'logout'){
+		wp_logout();
+		header('location:'.$root.'/');
+		die();
+	}
 }
