@@ -1,7 +1,4 @@
-<?php get_header();?>
-    
-    <script type="text/javascript" language="javascript">$(function(){border_presentation("<?php echo $_GET['presentation']?>")});</script>
-        		
+<?php get_header();?>	
 	<div id="content">
 	    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
 	    
@@ -10,7 +7,6 @@
 		    
 		    <section class="main">
 				<?php if (have_posts()) : the_post()?>
-					<p class="title"></p>
 					<div class="presentation <?php echo $_GET['presentation'];?>">
 						<h2 class="title presentation-title">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

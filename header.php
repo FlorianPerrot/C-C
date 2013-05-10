@@ -14,6 +14,23 @@
 		<!-- JavaScript -->
 		<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.js"></script>
         <script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/functions.js"></script>
+        <?php
+        	global $url;
+	        if( !empty($_GET['presentation']) ) 
+				$page = $_GET['presentation'];
+			elseif( !empty($_GET['post_type']) && $_GET['post_type'] == 'forum'|| !empty($_GET['forum']))
+				$page = "forum";
+			elseif (!empty($_GET['gallery']) || !empty($_GET['page_id']) && $_GET['page_id'] == 22)
+				$page = "gallery";
+			elseif (!empty($_GET['p']) || !empty($_GET['post_type']) && $_GET['post_type'] == 'post')
+				$page = "article";
+			elseif (!empty($_GET['page_id']) && $_GET['page_id'] == 39){
+				$page = 'documents';}
+			else 
+				$page = "accueil";
+		?>
+		
+		<script type="text/javascript" language="javascript">$(function(){border_page("<?php echo $page?>")});</script>	
 	</head>
 	<body>
 		<div class="wrap">

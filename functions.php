@@ -2,8 +2,11 @@
 add_theme_support( 'post-thumbnails' );
 add_action('send_headers','site_router');
 add_action('init', 'my_init');
+$url;
+	
 function my_init()
 {
+	
 	register_post_type('presentation', array(
 	  'label' => __('Presentation'),
 	  'singular_label' => __('Presentation'),
@@ -15,6 +18,7 @@ function my_init()
 	));
 }
 function site_router(){
+	global $url;
 	$root = str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 	$url = str_replace($root, '', $_SERVER['REQUEST_URI']);
 	$url = explode('/', $url);
@@ -24,3 +28,4 @@ function site_router(){
 		die();
 	}
 }
+?>
