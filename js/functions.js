@@ -26,8 +26,11 @@ function tab_to_css(tab_of_css){
 
 /* accueil / galerie / forum / article / 3 pole / documents */
 function border_page(nom_page) {
-		if(nom_page == "forum")
+		if(nom_page == "forum"){
 			$('.post').css('border','4px solid '+tab_color_menu[3]);
+			$('#bbpress-forums input, #bbpress-forums button').css('border','1px ridge'+tab_color_menu[3])
+			.css('background',tab_color_menu[3]);
+		}
 		else if (nom_page == "gallery"){
 			$('.main').css('border','4px solid '+tab_color_menu[2]);
 			$('.gallery-info').css('background',tab_color_menu[2]);
