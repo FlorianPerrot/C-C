@@ -8,7 +8,7 @@
 		    <section class="main">
 				<?php if (have_posts()) : the_post()?>
 					<div class="presentation <?php echo $_GET['presentation'];?>">
-						<h2 class="title presentation-title">
+						<h2 class="main-title presentation-title">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h2>
 						<?php	if ( has_post_thumbnail() ): ?>
@@ -28,4 +28,3 @@
 	    <?php get_sidebar(); ?>
 	</div>
 	<?php get_footer();?>
-?>

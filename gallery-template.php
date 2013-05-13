@@ -14,7 +14,7 @@ Template Name: Gallery Template
 	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
 	    
 	    <section class="main gallery-template post">
-			<h2 class="title .gallery-title"><?php the_title(); ?></h2>
+			<h2 class="main-title .gallery-title"><?php the_title(); ?></h2>
 			<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) echo pdfprnt_show_buttons_for_custom_post_type( 'post_type=gallery&orderby=post_date' ); ?>
 			<div class="gallery_box">
 				<ul>

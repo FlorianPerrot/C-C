@@ -5,10 +5,10 @@
 	    <div class="bloc-content bloc-center">
 		    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
 		    
-		    <section class="main">
+		    <section class="page main">
 				<?php if (have_posts()) : the_post();?>
 					<div class="post">
-						<h1 class="post-title"><?php the_title(); ?></h1>
+						<h2 class="main-titre"><a><?php the_title(); ?></a></h2>
 						<div class="post-content">
 							<?php the_content(); ?>
 						</div>

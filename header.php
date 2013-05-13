@@ -3,7 +3,7 @@
 	<head <?php language_attributes(); ?>>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php the_title(); ?></title>
-
+		<link rel="icon" type="image/png" href="<?php echo get_bloginfo('template_directory');?>/img/favicon.ico" />
         <!-- CSS -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
         <!-- Police Ubuntu -->
@@ -15,19 +15,25 @@
 		<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.js"></script>
         <script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/functions.js"></script>
         <?php
-        	global $url;
+        	global $url, $link;
+			
+			/* Recherche la page */
 	        if( !empty($_GET['presentation']) ) 
 				$page = $_GET['presentation'];
-			elseif( !empty($_GET['post_type']) && $_GET['post_type'] == 'forum'|| !empty($_GET['forum']))
+			elseif(!empty($_GET['forum']) || $url[0] == $link['forum'])
 				$page = "forum";
-			elseif (!empty($_GET['gallery']) || !empty($_GET['page_id']) && $_GET['page_id'] == 22)
-				$page = "gallery";
-			elseif (!empty($_GET['p']) || !empty($_GET['post_type']) && $_GET['post_type'] == 'post')
-				$page = "article";
-			elseif (!empty($_GET['page_id']) && $_GET['page_id'] == 39){
-				$page = 'documents';}
-			else 
+			elseif (!empty($_GET['gallery']) || $url[0] == $link['galerie'])
+				$page = "galerie";
+			elseif (!empty($_GET['p']) || $url[0] == $link['articles'])
+				$page = "articles";
+			elseif ( $url[0] == $link['documents'])
+				$page = 'documents';
+			elseif ( $url[0] == $link["contact"])
+				$page = 'contact';
+			elseif ( $url[0] == $link['accueil'])
 				$page = "accueil";
+			else
+				$page = "erreur";
 		?>
 		
 		<script type="text/javascript" language="javascript">$(function(){border_page("<?php echo $page?>")});</script>	
@@ -46,4 +52,3 @@
                 	
             	</div>
 			</header>
-               

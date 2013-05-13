@@ -9,7 +9,7 @@
 				</div>
 			</div>
 
-			<h2 class="title post-title">
+			<h2 class="main-title post-title">
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h2>
 

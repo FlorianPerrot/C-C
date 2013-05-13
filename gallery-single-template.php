@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				
-				<h2 class="title .gallery-title"><?php the_title(); ?></h2>
+				<h2 class="main-title .gallery-title"><?php the_title(); ?></h2>
 				<div class="gallery_box_single">
 					<?php the_content(); 
 					$posts = get_posts(array(

@@ -12,19 +12,9 @@
 h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0 .5em 0; /* -> 6 */
 }
-h1, h2, h3{
-	color: back;
-	font-family: Ubuntu, sans-serif;
-	font-weight: normal; /* -> 7 */
-}
+
 h1 {
 	font-size: 3em; /* -> 8 */
-}
-.title, .title a{
-	font-family: Lucida Handwriting;
-	text-decoration:none;
-	padding: 10px;
-	color: black; 
 }
 .main ul li{
 	padding-left: -45px;
@@ -33,9 +23,7 @@ h1 {
 h2 {font-size: 1.8em;}
 h3 {font-size: 1.2em;}
 h4 {font-size: 1em;}
-a{
-    font-family: Ubuntu, sans-serif;
-}
+a{font-family: Ubuntu, sans-serif;}
 
 body {
 	margin:  auto;
@@ -49,10 +37,9 @@ body {
 /****************/
 header {
     text-align: center;
-	height: 360px;
+	height: 300px;
 	
 	background: url(img/background_gite.jpg), black;
-	background-repeat:no-repeat;
 	background-position:center;
 }
 .barre-top{
@@ -61,7 +48,11 @@ header {
 header .bloc-titre{
 	display: inline-block;
 	vertical-align: top;
-	width: 320px;	
+	width: 320px;
+	
+	position: relative;
+	top:40px;
+	right: 160px;
 }
 header .bloc-titre img{
 	overflow: hidden;
@@ -83,8 +74,12 @@ header .bloc-logo{
 	
 	position: relative;
 	top: 60px;
-	right: 60px; 
+	right: 120px; 
 }
+/***************/
+/*  PAGE-NAME  */
+/***************/
+
 
 
 /*************/
@@ -209,11 +204,16 @@ nav a b{
 	overflow: hidden;
 	width:95%;
 }
-.main .main-titre{
-	-webkit-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
+
+.main-title, .main-title a{
+	font-family: Lucida Handwriting;
+	text-decoration:none;
+	padding: 10px;
+	color: black; 
+}
+
+.page {
+	background:white;
 }
 
 /* SIDEBAR */
@@ -271,7 +271,7 @@ border-radius: 0 0 60px 60px;
 	height: 37px;
 	
 	position:relative;
-	top:300px;
+	top:200px;
 	left: 0px;
 }
 #searchform form input{
@@ -547,6 +547,11 @@ margin-left:-150px;
 	padding: 20px;
 	border: 1px dotted black;
 }
+
+/****************/
+/*  ERREUR 404  */
+/****************/
+
 /***************/
 /*  ANIMATION  */
 /***************/
