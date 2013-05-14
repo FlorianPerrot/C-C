@@ -14,6 +14,7 @@
 			</h2>
 
 			<div class="post-content">
+				<?php get_search_query(); ?>
 			<?php the_content(); ?>
 			</div>
 		</div>

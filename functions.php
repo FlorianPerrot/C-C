@@ -11,7 +11,7 @@ function my_init()
 	'pole1'=>'?presentation=pole-tourisme-adapte','pole2'=>'?presentation=pole-integration','documents'=>'?post_type=39',
 	'galerie'=>'?page_id=39','forum'=>'?post_type=forum','articles'=>'?post_type=post','contact'=>'?page_id=65',
 	'mentionsLegales'=>'?page_id=69','planDuSite' => '?page_id=71');
-	
+	register_sidebar();
 	register_post_type('presentation', array(
 	  'label' => __('Presentation'),
 	  'singular_label' => __('Presentation'),

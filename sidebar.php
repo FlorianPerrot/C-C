@@ -1,6 +1,7 @@
 <div class="bloc-content side">
+	<!--
 	<section>
-		<h4>Mini-galerie</h4>
+		<h4>L'équipe</h4>
 		<div id="mini-galerie" class="crayon article-css-35 demoTime">
 			<div id="demoWrap">
 		    	<a id="wrap1" class="ancre"></a>
@@ -19,6 +20,12 @@
 		         </div>
 			</div>
 		</div>
+	</section>-->
+	<section>
+		<h4>L'équipe</h4>
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+		 
+		<?php endif; ?>
 	</section>
 	<!-- The meta -->
 	<section>

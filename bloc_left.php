@@ -21,7 +21,7 @@
 		<div class="onglets-content">				
 			<p><a href="http://www.ancv.com/"><img alt="ancv" src="<?php echo get_bloginfo('template_directory');?>/img/partenaires/ancv.jpg" width="75px" height="60px"/></a></p>
 			<p><a href="http://www.serena.asso.fr/"><img alt="serena" src="<?php echo get_bloginfo('template_directory');?>/img/partenaires/serena.jpg" width="75px" height="75px"/></a></p>
-			<p><a href="http://www.rendezvousenfrance.com/"><img alt="atout-france" src="<?php echo get_bloginfo('template_directory');?>/img/partenaires/atout-france.jpg" width="95px" height="75px"/></a></p>
+			<p><a href="http://int.rendezvousenfrance.com/fr"><img alt="atout-france" src="<?php echo get_bloginfo('template_directory');?>/img/partenaires/atout-france.jpg" width="95px" height="75px"/></a></p>
 		</div>
 	</div>
 </div>

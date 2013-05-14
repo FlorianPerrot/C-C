@@ -29,23 +29,23 @@ function tab_to_css(tab_of_css){
 function border_page(nom_page) {
 		if(nom_page == "forum"){
 			$('.main').css('border','4px solid '+tab_color_menu[3]);
-			$('.main h2').css('color',tab_color_menu[3]);
+			$('.main h2 a').css('color',tab_color_menu[3]);
 			$('#bbpress-forums input, #bbpress-forums button').css('border','1px ridge'+tab_color_menu[3])
 			.css('background',tab_color_menu[3]);
 		}
 		else if (nom_page == "galerie"){
 			$('.main').css('border','4px solid '+tab_color_menu[2]);
-			$('.main a').css('color',tab_color_menu[2]);
+			$('.main h2').css('color',tab_color_menu[2]);
 			$('.gallery-info').css('background',tab_color_menu[2]);
 		}
 		else if (nom_page == 'articles'){
 			$('.post').css('border','4px solid '+tab_color_menu[4]);
-			$('.post a').css('color',tab_color_menu[4]);
+			$('.post h2 a').css('color',tab_color_menu[4]);
 			$('.info').css('background',tab_color_menu[4]);
 		}
 		else if(nom_page == 'accueil'){
 			$('.main').css('border','4px solid '+tab_color_menu[0]);
-			$('.main h1').css('color',tab_color_menu[0]);
+			$('.main h2 a').css('color',tab_color_menu[0]);
 			}
 		else if(nom_page == 'contact'){
 			$('.main').css('border','4px solid '+tab_color_menu[5]);
@@ -84,12 +84,12 @@ function fermeture_sous_page() {
 	
 function fermeture_site() {
 		$('#content').hide($time_site);
-		$('footer .actions-site').attr('src',$template_directory + '/img/lock.png');
+		$('footer .actions-site').attr('src',$template_directory + '/img/site_lock.png');
 }
 	
 function ouverture_site() {
 		$('#content').show($time_site);
-		$('footer .actions-site').attr('src',$template_directory + '/img/unlock.png');
+		$('footer .actions-site').attr('src',$template_directory + '/img/site_unlock.png');
 }
 
 function init(){
@@ -117,8 +117,9 @@ function init(){
 		});
 	
 		/* BOUTON ET FOCUS*/
-		$('.link-courriel').mouseenter(function(){
-			$(this).animate({"opacity":".5"},1000);
+		
+		$('.link-courriel, .actions-site, .menu a').mouseenter(function(){
+			$(this).animate({"opacity":".5"},500);
 		})
 		.mouseleave(function(){
 				$(this).animate({"opacity":"1"},1000);

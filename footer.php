@@ -1,7 +1,7 @@
 			<footer>
 				<?php global $link;?>
+				<a href="#" onclick="return false;"><img class="actions-site" alt="ouverture / fermeture du site" src="<?php echo get_bloginfo('template_directory');?>/img/site_unlock.png" width="300px" height="80px"/></a>
 				<div class="footer-content">
-					<img class="actions-site" alt="ouverture du site" src="<?php echo get_bloginfo('template_directory');?>/img/unlock.png" width="30px" height="30px"/>
 					<div>
 						<p><a href="<?php echo get_bloginfo('url');echo '/'.$link['planDuSite'];?>">Plan du site</a> | <a href="<?php echo get_bloginfo('url');echo '/'.$link['mentionsLegales'];?>">Mentions légales</a><br />
 							Culture et Cultures - 275 chemin de Gouste-Soulet - 26400 GRANE<br />

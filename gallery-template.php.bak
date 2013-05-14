@@ -5,9 +5,16 @@ Template Name: Gallery Template
 ?>
 
 <?php get_header(); ?>
-	<div id="container">
-		<div role="main" id="content">
-			<h1 class="home_page_title"><?php the_title(); ?></h1>
+
+
+<div id="content">
+    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
+    
+    <div class="bloc-content bloc-center">
+	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+	    
+	    <section class="main gallery-template post">
+			<h2 class="main-title .gallery-title"><?php the_title(); ?></h2>
 			<?php if ( function_exists( 'pdfprnt_show_buttons_for_custom_post_type' ) ) echo pdfprnt_show_buttons_for_custom_post_type( 'post_type=gallery&orderby=post_date' ); ?>
 			<div class="gallery_box">
 				<ul>
@@ -70,6 +77,13 @@ Template Name: Gallery Template
 					$count++;
 				?>
 					<li>
+						<div class="info gallery-info">
+							<div class="date gallery-date">
+				  				<span class="day"><?php the_time('d') ?></span> 
+				  				<span class="month"><?php the_time('M') ?></span> 
+				 				<span class="year"><?php the_time('Y') ?></span>
+							</div>
+						</div>
 						<img style="width:<?php echo $gllr_options['gllr_custom_size_px'][0][0]; ?>px; <?php echo $gllr_border; ?>" alt="<?php echo $post->post_title; ?>" title="<?php echo $post->post_title; ?>" src="<?php echo $image_attributes[0]; ?>" />
 						<div class="gallery_detail_box">
 							<div><?php echo $post->post_title; ?></div>
@@ -100,9 +114,12 @@ Template Name: Gallery Template
 
 						echo "<div class='clear'></div></div>\n";
 					} else {?>
-						</div>
-					<?php } ?>
-		</div>
-	</div>
+			</div>
+		<?php } ?>
+	    </section>
+    </div>
+    <?php get_sidebar(); ?>
+</div>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
