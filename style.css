@@ -32,6 +32,11 @@ body {
 	max-width: 2048px;
 }
 
+.text-icon img, .text-icon span{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 /****************/
 /*   HEADER     */
 /****************/
@@ -557,6 +562,20 @@ margin-left:-150px;
 .bbp-topic-form{
 	padding: 20px;
 	border: 1px dotted black;
+}
+/*************/
+/*  CONTACT  */
+/*************/
+.contact{
+	background: white;
+	padding: 10px;
+}
+.contact-left, .contact-right{
+	padding:30px;
+	float: left;
+}
+.contact-left{
+	border-right: 1px dotted black;
 }
 
 /****************/

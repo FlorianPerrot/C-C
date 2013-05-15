@@ -1,7 +1,13 @@
 <?php get_header(); ?>
-	<div id="container">
-		<div role="main" id="content">
-			<?php 
+
+<div id="content">
+    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
+    
+    <div class="bloc-content bloc-center">
+	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+	    
+	    <section class="main gallery-template post">
+<?php 
 			global $post, $wp_query;
 			$args = array(
 				'post_type'					=> 'gallery',
@@ -12,7 +18,15 @@
 			$second_query = new WP_Query( $args ); 
 			$gllr_options = get_option( 'gllr_options' );
 			if ($second_query->have_posts()) : while ($second_query->have_posts()) : $second_query->the_post(); ?>
-				<h1 class="home_page_title"><?php the_title(); ?></h1>
+				<div class="info gallery-info">
+					<div class="date gallery-date">
+				  		<span class="day"><?php the_time('d') ?></span> 
+				  		<span class="month"><?php the_time('M') ?></span> 
+				 		<span class="year"><?php the_time('Y') ?></span>
+					</div>
+				</div>
+				
+				<h2 class="main-title .gallery-title"><?php the_title(); ?></h2>
 				<div class="gallery_box_single">
 					<?php the_content(); 
 					$posts = get_posts(array(
@@ -85,10 +99,10 @@
 						<div class="return_link"><a href="<?php echo $gllr_options["return_link_url"]; ?>"><?php echo $gllr_options['return_link_text']; ?></a></div>
 					<?php }
 				} ?>
-			</div>
-		</div>
-	<?php get_sidebar(); ?>
-	<script type="text/javascript">
+	    </section>
+    </div>
+    <?php get_sidebar(); ?>
+    	<script type="text/javascript">
 		(function($){
 			$(document).ready(function(){
 				$("a[rel=gallery_fancybox]").fancybox({
@@ -108,4 +122,7 @@
 			});
 		})(jQuery);
 	</script>
+</div>
+
+
 <?php get_footer(); ?>
