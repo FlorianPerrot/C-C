@@ -34,7 +34,7 @@
 		<?php if($user->ID == 0): ?>
 				<a href="<?php echo bloginfo('url');?>/wp-login.php">Se connecter</a> / <a href="<?php echo bloginfo('url');?>/wp-login.php?action=register"> S'inscrire</a>
 		<?php else:?>
-				Salut, <?php echo $user->user_login;?>
+				Bonjour, <?php echo $user->user_login;?> / 
 				<a href="<?php echo bloginfo('url');?>/logout">Se déconnecter</a>
 		<?php endif; ?>
 	</section>

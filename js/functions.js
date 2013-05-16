@@ -93,8 +93,14 @@ function ouverture_site() {
 }
 
 function init(){
+		/*  Chargement  */
+		$('.bloc-content').hide();
+		$(window).load(function(){
+			$('#chargement').hide();
+			$('.bloc-content').show();
+		});
+	
 		/* MAIL */
-
 		$('.link-courriel').each(function() {
 			var text = jQuery(this).attr('href');
 			 var address = text.replace(" at ", "@");

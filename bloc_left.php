@@ -1,3 +1,4 @@
+<div id="chargement" style="margin: 50px auto;border-radius: 50%;background: white;padding: 40px;width: 120px;height: 120px;"><img src="<?php echo get_bloginfo('template_directory');?>/img/chargement.gif" alt="chargement"/></div>
 <div class="bloc-content bloc-left">
 	<nav class="menu">
 		<h2>Menu</h2>
