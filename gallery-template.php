@@ -118,7 +118,6 @@ Template Name: Gallery Template
 		<?php } ?>
 	    </section>
     </div>
-    <?php get_sidebar(); ?>
 </div>
 
 <?php get_sidebar(); ?>

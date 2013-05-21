@@ -101,7 +101,6 @@
 				} ?>
 	    </section>
     </div>
-    <?php get_sidebar(); ?>
     	<script type="text/javascript">
 		(function($){
 			$(document).ready(function(){
