@@ -4,7 +4,7 @@
 	    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
 	    
 	    <div class="bloc-content bloc-center">
-		    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+		    <?php include (TEMPLATEPATH . "/sous_menu.php"); ?>
 		    
 		    <section class="main">
 				<?php get_template_part('loop'); ?>

@@ -8,7 +8,7 @@ function my_init()
 {
 	global $link;
 	$link = array('accueil'=>'','presentation'=>'','objectifs'=>'?presentation=objectifs',
-	'pole1'=>'?presentation=pole-tourisme-adapte','pole2'=>'?presentation=pole-culture-de-liens','documents'=>'?post_type=71',
+	'pole1'=>'?presentation=pole-tourisme-adapte','pole2'=>'?presentation=pole-culture-de-liens','documents'=>'?page_id=71',
 	'galerie'=>'?page_id=18','forum'=>'?post_type=forum','articles'=>'?post_type=post','contact'=>'?page_id=20',
 	'mentionsLegales'=>'?page_id=93','planDuSite' => '?page_id=95');
 	register_sidebar();

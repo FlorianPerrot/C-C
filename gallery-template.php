@@ -11,7 +11,7 @@ Template Name: Gallery Template
     <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
     
     <div class="bloc-content bloc-center">
-	    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+	    <?php include (TEMPLATEPATH . "/sous_menu.php"); ?>
 	    
 	    <section class="main gallery-template post">
 			<h2 class="main-title .gallery-title"><?php the_title(); ?></h2>

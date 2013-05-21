@@ -3,7 +3,7 @@
 	    <?php include (TEMPLATEPATH . "/bloc_left.php"); ?>
 	    
 	    <div class="bloc-content bloc-center">
-		    <?php include (TEMPLATEPATH . "/sous_page.php"); ?>
+		    <?php include (TEMPLATEPATH . "/sous_menu.php"); ?>
 		    
 		    <section class="page main">
 				<?php if (have_posts()) : the_post();?>

@@ -21,21 +21,22 @@
 			</div>
 		</div>
 	</section>-->
-	<section>
-		<h4>L'équipe</h4>
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-		 
-		<?php endif; ?>
-	</section>
-	<!-- The meta -->
-	<section>
+		<!-- The meta -->
+	<section id="meta">
 		<h4>Mes informations</h4>
 		<?php $user = wp_get_current_user();?>
 		<?php if($user->ID == 0): ?>
 				<a href="<?php echo bloginfo('url');?>/wp-login.php">Se connecter</a> / <a href="<?php echo bloginfo('url');?>/wp-login.php?action=register"> S'inscrire</a>
 		<?php else:?>
-				Bonjour, <?php echo $user->user_login;?> / 
+				Bonjour, <?php echo $user->user_login;?> <br /> 
 				<a href="<?php echo bloginfo('url');?>/logout">Se déconnecter</a>
+		<?php endif; ?>
+	</section>
+	
+	<section>
+		<h4>L'équipe</h4>
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+		 
 		<?php endif; ?>
 	</section>
 </div>
