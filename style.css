@@ -101,10 +101,6 @@ header .bloc-logo{
 	top: 60px;
 	right: 200px; 
 }
-/***************/
-/*  PAGE-NAME  */
-/***************/
-
 
 
 /*************/
@@ -196,20 +192,22 @@ nav a b{
 /* SOUS-MENU*/
 .sous-menu{
 	position:relative;
-	top: 60px;
+	top: 80px;
 	right:25px;
 	border-radius: 0 50% 50% 0;
 	z-index:1;
 	width: 0px;
+	height: 450px;
+	
 	overflow: hidden;
 	text-align:left;
 	box-shadow: 5px 0 6px #888;
-	padding: 10px 0;
+	padding: 0 0;
 	background: white;
 	
 }
 .sous-menu .menu-secondaire{
-	padding: 50px 0 50px 0;
+	padding: 40px 0;
 }
 
 /* CONTENT */
@@ -222,9 +220,9 @@ nav a b{
 	z-index:0;
 	text-align:left;
     min-height: 390px;
-    top: -500px;
+    top: -450px;
 	overflow: hidden;
-	margin: 0 10px -500px 10px;
+	margin: 0 10px -450px 10px;
 }
 
 .main h2, .main h2 a{
