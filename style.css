@@ -4,7 +4,7 @@
 @media screen and (max-width: 1440px) {
 	header {
 		
-		background: url(img/background_gite_810p.jpg)no-repeat, black;
+		background: url(img/background_gite_810p.jpg) no-repeat, black;
 	}
 	footer{
 		min-height:510px; 
@@ -13,11 +13,11 @@
 }
 @media screen and (min-width: 1440px) {
 	header {
-		background: url(img/background_gite.jpg)no-repeat, black;
+		background: url(img/background_gite_1080p.jpg) no-repeat, black;
 	}
 	footer{
 		min-height:780px; 
-		background: url(img/background_gite.jpg) no-repeat, black;
+		background: url(img/background_gite_1080p.jpg) no-repeat, black;
 	}
 }
 
