@@ -4,7 +4,7 @@
 		<h2>Menu</h2>
 		<div class="onglets-content">	
 			<a href="<?php echo get_bloginfo('url');echo '/'.$link['accueil'];?>"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/accueil.png" width="35px" height="35px"/></b><p>Accueil</p></a>
-			<a href="#" class="actions-menu-secondaire" onclick="return false;"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/ico-logo.png" width="35px" height="35px"/></b><p>Présentation</p> </a>
+			<a class="actions-menu-secondaire" onclick="return false;"><b><img alt="maison" src="<?php echo get_bloginfo('template_directory');?>/img/ico-logo.png" width="35px" height="35px"/></b><p>Présentation</p> </a>
 				<!-- MENU SECONDAIRE
 				Objectif
 				Tourisme adapté

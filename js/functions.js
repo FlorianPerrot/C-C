@@ -6,21 +6,33 @@ $color_default = "#33A133"
 var tab_color_menu = ["#375D81","#ff6600","#d11001","#019e59","#2d9500", "#d6191f"];/* Taille du tableau = nombre de lien dans le menu*/
 var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66","#ffEE88"];
 
-var tab_nom_sous_menu = ["objectifs","pole-tourisme-adapte","pole-integration","documents"]; 
+var tab_nom_sous_menu = ["objectifs","pole-tourisme-adapte","pole-culture-de-liens","documents"]; 
 
 $taille_menu = tab_color_menu.length;
 $taille_sous_menu = tab_color_sous_menu.length;
 
-/*  FUNCTION EXTERN  */
-function cal_taille_bloc_center(){
-	return $('body').width()-$('.bloc-left').width()-$('.side').width()-20;
+/* Gestion des COOKIE*/
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
 }
 
-function tab_to_css(tab_of_css){
-	return tab_of_css[0]+' '+tab_of_css[1]+' '+tab_of_css[2]+' '+tab_of_css[3];
-}
-
-/* accueil / galerie / forum / article / 3 pole / documents */
+/* Gestion de la couleur des bordures de la pages */
 function border_page(nom_page) {
 		if(nom_page == "forum"){
 			$('.main').css('border','4px solid '+tab_color_menu[3]);
@@ -50,35 +62,47 @@ function border_page(nom_page) {
 			for(var x=0;x<=$taille_sous_menu;x+=1){
 				if(tab_nom_sous_menu[x] == nom_page){
 					$('.main').css('border','4px solid '+tab_color_sous_menu[x]);
-					$('.main a').css('color',tab_color_sous_menu[x]);
+					$('.main h2').css('color',tab_color_sous_menu[x]);
 					break;
 				}
 			}
 		}
 }
 
+/* Gestion ouverture/Fermeture du sous-menu */
 function ouverture_sous_menu(taille_ouverture_menu) {
 		$('.sous-menu').animate({width:'400px'},$time_menu,function(){
 			$('.sous-menu nav p').show();
 		});
 }
-
 function fermeture_sous_menu() {
     	$('.sous-menu nav p').hide();
 		$('.sous-menu').animate({width:"0%"},$time_menu,function(){
 		});
-}
-	
+}	
+
+/* Gestion Ouverture/fermeture du site */
 function fermeture_site() {
 		$('#content').hide($time_site);
 		$('footer .actions-site').attr('src',$template_directory + '/img/site_lock.png');
 }
-	
 function ouverture_site() {
 		$('#content').show($time_site);
 		$('footer .actions-site').attr('src',$template_directory + '/img/site_unlock.png');
+		calTailleBlocCentral();
+		if (readCookie("EtatSite") == null)
+			createCookie("EtatSite","ouvert",7);
 }
 
+/* Calcule la taille que doit avoir le bloc central de la page */
+function calTailleBlocCentral(){
+		var taillebloc = $('body').width()-$('.bloc-left').width()-$('.side').width()-25;
+		if ($('.side').width() != null && taillebloc > 1321)
+			taillebloc=1321;
+		$('.bloc-center').css('width',taillebloc+'px');
+}
+
+/* L'initialisation du site */
 function init(){
 		/*  Chargement  */
 		$(window).load(function(){
@@ -102,9 +126,9 @@ function init(){
 		$('.sous-menu nav p').hide();
 		
 		/* Mise en place de la taille du bloc central */
-		$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
+		calTailleBlocCentral();
 		$(window).resize(function(){
-			$('.bloc-center').css('width',cal_taille_bloc_center()+'px');
+			calTailleBlocCentral();
 		});
 	
 		/* BOUTON ET FOCUS*/
@@ -116,7 +140,7 @@ function init(){
 				ouverture_sous_menu(400);
 			}
 		});
-		$('.sous-page .fermeture-sous-page').click(function(){
+		$('.sous-menu .fermeture-sous-menu').click(function(){
 				fermeture_sous_menu();
 		});
 		$('footer .actions-site').click(function(){
@@ -139,10 +163,9 @@ function init(){
 }
 
 jQuery(document).ready( function () {
-    //DOM est défini
-	
-	/******************/
-	/*	INIT ACTIONS  */
-	/******************/
+	if (readCookie("EtatSite") == null){
+		$('#content').hide();
+		$('footer .actions-site').attr('src',$template_directory + '/img/site_lock.png');
+	};
 	init();
 });

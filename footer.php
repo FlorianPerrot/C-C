@@ -1,6 +1,6 @@
 			<footer>
 				<?php global $link;?>
-				<a href="#" onclick="return false;"><img class="actions-site" alt="ouverture / fermeture du site" src="<?php echo get_bloginfo('template_directory');?>/img/site_unlock.png" width="300px" height="80px"/></a>
+				<a href="#"><img class="actions-site" alt="ouverture / fermeture du site" src="<?php echo get_bloginfo('template_directory');?>/img/site_unlock.png" width="300px" height="80px"/></a>
 				<div class="footer-content">
 					<div>
 						<p>
