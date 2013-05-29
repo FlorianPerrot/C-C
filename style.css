@@ -35,7 +35,6 @@ h1 {
 	font-size: 3em; /* -> 8 */
 }
 .main ul li{
-	padding-left: -45px;
 	margin-left: 45px;
 }
 h2 {font-size: 1.8em;}
@@ -99,10 +98,6 @@ header .bloc-logo{
 	top: 60px;
 	right: 200px; 
 }
-/***************/
-/*  PAGE-NAME  */
-/***************/
-
 
 
 /*************/
@@ -199,18 +194,29 @@ nav a b{
 /* SOUS-MENU*/
 .sous-menu{
 	position:relative;
+<<<<<<< HEAD
 	top: 85px;
+=======
+	top: 80px;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 	right:25px;
 	border-radius: 0 50% 50% 0;
 	z-index:1;
 	width: 0px;
+	height: 450px;
+	
 	overflow: hidden;
 	
 	box-shadow: 5px 0 6px #888;
+<<<<<<< HEAD
+=======
+	padding: 0 0;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 	background: white;
 	height: 450px;
 }
 .sous-menu .menu-secondaire{
+<<<<<<< HEAD
 	padding: 40px 0 40px 20px;
 }
 
@@ -223,6 +229,9 @@ nav a b{
 
 .sous-menu .onglets-content a{
 width: 280px;
+=======
+	padding: 40px 0;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 }
 
 /* CONTENT */
@@ -235,9 +244,13 @@ width: 280px;
 	z-index:0;
 	text-align:left;
     min-height: 390px;
+<<<<<<< HEAD
     top: -470px;
+=======
+    top: -450px;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 	overflow: hidden;
-	margin: 0 10px -500px 10px;
+	margin: 0 10px -450px 10px;
 }
 
 .main h2, .main h2 a{

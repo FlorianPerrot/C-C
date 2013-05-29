@@ -4,6 +4,11 @@ add_action('send_headers','site_router');
 add_action('init', 'my_init');
 $url;
 $link;	
+
+if (!current_user_can('manage_options')) {
+	add_filter('show_admin_bar', '__return_false');
+}
+	
 function my_init()
 {
 	global $link;
