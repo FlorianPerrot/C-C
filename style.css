@@ -195,7 +195,11 @@ nav a b{
 .sous-menu{
 	position:relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	top: 85px;
+=======
+	top: 80px;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 =======
 	top: 80px;
 >>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
@@ -209,6 +213,10 @@ nav a b{
 	
 	box-shadow: 5px 0 6px #888;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	padding: 0 0;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 =======
 	padding: 0 0;
 >>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
@@ -216,6 +224,7 @@ nav a b{
 	height: 450px;
 }
 .sous-menu .menu-secondaire{
+<<<<<<< HEAD
 <<<<<<< HEAD
 	padding: 40px 0 40px 20px;
 }
@@ -232,6 +241,9 @@ width: 280px;
 =======
 	padding: 40px 0;
 >>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
+=======
+	padding: 40px 0;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 }
 
 /* CONTENT */
@@ -245,7 +257,11 @@ width: 280px;
 	text-align:left;
     min-height: 390px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: -470px;
+=======
+    top: -450px;
+>>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
 =======
     top: -450px;
 >>>>>>> 7c4ce69ce24a7b5850a75dcc0d55a4b9b72708ac
