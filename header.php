@@ -48,7 +48,8 @@
                 	
                 	<div class="bloc-titre"><a href="<?php echo network_site_url( '/' );?>"> <img class="titre-fond" alt="Culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/titre-fond.png" width="320px" height="200px"/> <img class="titre-anime" alt="Culture et cultures" src="<?php echo get_bloginfo('template_directory');?>/img/titre-anime.gif" width="320px" height="200px"/> </a></div>
        				
-                	<?php get_search_form( $echo ); ?>
-                	
+					<section id="searchform" class="bloc-searchform">
+						<?php //get_search_form( $echo ); ?>
+                	</section>
             	</div>
 			</header>

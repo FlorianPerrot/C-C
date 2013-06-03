@@ -1,10 +1,10 @@
 $time_menu = 1000;
 $time_site = 2000;
 $template_directory = "wp-content/themes/C-C";
-$color_default = "#33A133"
+$color_default = "#EF6C00"
 
-var tab_color_menu = ["#375D81","#ff6600","#d11001","#019e59","#2d9500", "#d6191f"];/* Taille du tableau = nombre de lien dans le menu*/
-var tab_color_sous_menu = ["#ff8822","#ffAA44","#ffCC66","#ffEE88"];
+var tab_color_menu = ["#EF6C00","#004478","#BA0500","#BAB500","#0E9800", "#930059"];/* Taille du tableau = nombre de lien dans le menu*/
+var tab_color_sous_menu = ["#3084BF","#0095FF","#40B0FF","#73C5FF"];
 
 var tab_nom_sous_menu = ["objectifs","pole-tourisme-adapte","pole-culture-de-liens","documents"]; 
 
@@ -63,6 +63,8 @@ function border_page(nom_page) {
 				if(tab_nom_sous_menu[x] == nom_page){
 					$('.main').css('border','4px solid '+tab_color_sous_menu[x]);
 					$('.main h2').css('color',tab_color_sous_menu[x]);
+					$('.type-sejour').css('border-color',tab_color_sous_menu[x]);
+					$('.type-sejour h3').css('background',tab_color_sous_menu[x]);
 					break;
 				}
 			}

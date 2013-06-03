@@ -238,6 +238,22 @@ nav a b{
 	margin: 0 10px -450px 10px;
 }
 
+.type-sejour h3{
+	text-align: center;
+	color: white;
+	margin: 0 0 10px -10px;
+	border-radius: 0 0 30px 0;
+	padding: 10px;
+	width: 200px;
+}
+
+.type-sejour{
+	width: 80%;
+	margin: auto;
+	padding: 0 10px 10px 10px;
+	border: 3px solid;
+}
+
 .main h2, .main h2 a{
 	font-family: Lucida Handwriting;
 	text-decoration:none;
