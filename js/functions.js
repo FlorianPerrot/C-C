@@ -1,6 +1,6 @@
 $time_menu = 1000;
 $time_site = 2000;
-$template_directory = "wp-content/themes/C-C";
+$template_directory = "http://127.0.0.1:8080/C-C/wordpress/wp-content/themes/C-C";
 $color_default = "#EF6C00"
 
 var tab_color_menu = ["#EF6C00","#004478","#BA0500","#BAB500","#0E9800", "#930059"];/* Taille du tableau = nombre de lien dans le menu*/
@@ -48,7 +48,7 @@ function border_page(nom_page) {
 		else if (nom_page == 'articles'){
 			$('.post').css('border','4px solid '+tab_color_menu[4]);
 			$('.post h2 a').css('color',tab_color_menu[4]);
-			$('.info').css('background',tab_color_menu[4]);
+			$('.info, .more-link').css('background',tab_color_menu[4]);
 		}
 		else if(nom_page == 'accueil'){
 			$('.main').css('border','4px solid '+tab_color_menu[0]);
@@ -58,7 +58,6 @@ function border_page(nom_page) {
 			$('.main').css('border','4px solid '+tab_color_menu[5]);
 			$('.main a').css('color',tab_color_menu[5]);}
 		else{
-			$('.main').css('border','2px solid '+$color_default);
 			for(var x=0;x<=$taille_sous_menu;x+=1){
 				if(tab_nom_sous_menu[x] == nom_page){
 					$('.main').css('border','4px solid '+tab_color_sous_menu[x]);

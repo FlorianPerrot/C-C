@@ -18,13 +18,13 @@
         	global $url, $link;
 			
 			/* Recherche la page */
-	        if( !empty($_GET['presentation']) ) 
-				$page = $_GET['presentation'];
-			elseif(!empty($_GET['forum']) || $url[0] == $link['forum'])
+	        if( $url[0] == $link['presentation'])
+				$page = $url[1];
+			elseif($url[0] == $link['forum'])
 				$page = "forum";
-			elseif (!empty($_GET['gallery']) || $url[0] == $link['galerie'])
+			elseif ($url[0] == $link['galerie'])
 				$page = "galerie";
-			elseif (!empty($_GET['p']) || $url[0] == $link['articles'])
+			elseif ($url[0] == $link['articles'])
 				$page = "articles";
 			elseif ( $url[0] == $link['documents'])
 				$page = 'documents';
@@ -33,7 +33,7 @@
 			elseif ( $url[0] == $link['accueil'])
 				$page = "accueil";
 			else
-				$page = "erreur";
+				$page = "other";
 		?>
 		
 		<script type="text/javascript" language="javascript">$(function(){border_page("<?php echo $page?>")});</script>	

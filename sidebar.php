@@ -26,7 +26,7 @@
 		<h4>Mes informations</h4>
 		<?php $user = wp_get_current_user();?>
 		<?php if($user->ID == 0): ?>
-				<a href="<?php echo bloginfo('url');?>/wp-login.php">Se connecter</a> / <a href="<?php echo bloginfo('url');?>/wp-login.php?action=register"> S'inscrire</a>
+				<a href="<?php echo bloginfo('wpurl');?>/wp-login.php">Se connecter</a> / <a href="<?php echo bloginfo('url');?>/wp-login.php?action=register"> S'inscrire</a>
 		<?php else:?>
 				Bonjour, <?php echo $user->user_login;?> <br /> 
 				<a href="<?php echo bloginfo('url');?>/logout">Se déconnecter</a>
