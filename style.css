@@ -4,7 +4,7 @@
 @media screen and (max-width: 1440px) {
 	header {
 		
-		background: url(img/background_gite_810p.jpg)no-repeat, black;
+		background: url(img/background_gite_810p.jpg) no-repeat, black;
 	}
 	footer{
 		min-height:510px; 
@@ -13,19 +13,17 @@
 }
 @media screen and (min-width: 1440px) {
 	header {
-		background: url(img/background_gite.jpg)no-repeat, black;
+		background: url(img/background_gite_1080p.jpg) no-repeat, black;
 	}
 	footer{
 		min-height:780px; 
-		background: url(img/background_gite.jpg) no-repeat, black;
+		background: url(img/background_gite_1080p.jpg) no-repeat, black;
 	}
 }
 
 
 *{
-	padding:0px;
 	margin:0px;
-	border: none;
 }
 
 /* Text */
@@ -154,6 +152,11 @@ header .bloc-logo{
 	
 	box-shadow: 0 0 2px black;
 }
+
+.bloc-left .actions-menu-secondaire {
+	cursor: pointer;
+}
+
 nav h2{
 	margin-top: 0;
 }
@@ -191,7 +194,7 @@ nav a b{
 /* SOUS-MENU*/
 .sous-menu{
 	position:relative;
-	top: 80px;
+	top: 85px;
 	right:25px;
 	border-radius: 0 50% 50% 0;
 	z-index:1;
@@ -199,14 +202,25 @@ nav a b{
 	height: 450px;
 	
 	overflow: hidden;
-	text-align:left;
+	
 	box-shadow: 5px 0 6px #888;
 	padding: 0 0;
 	background: white;
-	
+	height: 450px;
 }
 .sous-menu .menu-secondaire{
-	padding: 40px 0;
+	padding: 40px 0 40px 20px;
+}
+
+.sous-menu .fermeture-sous-menu{
+	float: right;
+	position:relative;
+	left:5px;
+	cursor: pointer;
+}
+
+.sous-menu .onglets-content a{
+	width: 280px;
 }
 
 /* CONTENT */
@@ -219,9 +233,25 @@ nav a b{
 	z-index:0;
 	text-align:left;
     min-height: 390px;
-    top: -450px;
+    top: -470px;
 	overflow: hidden;
 	margin: 0 10px -450px 10px;
+}
+
+.type-sejour h3{
+	text-align: center;
+	color: white;
+	margin: 0 0 10px -10px;
+	border-radius: 0 0 30px 0;
+	padding: 10px;
+	width: 200px;
+}
+
+.type-sejour{
+	width: 80%;
+	margin: auto;
+	padding: 0 10px 10px 10px;
+	border: 3px solid;
 }
 
 .main h2, .main h2 a{
