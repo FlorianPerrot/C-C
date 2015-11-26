@@ -1,4 +1,3 @@
-<div id="chargement" style="margin: 50px auto;border-radius: 50%;background: white;padding: 40px;width: 120px;height: 120px;"><img src="<?php echo get_bloginfo('template_directory');?>/img/chargement.gif" alt="chargement"/></div>
 <div class="bloc-content bloc-left">
 	<nav class="menu">
 		<h2>Menu</h2>
@@ -13,7 +12,7 @@
 			<a href="<?php echo get_bloginfo('url');echo '/'.$link['galerie'];?>"><b><img alt="galerie" src="<?php echo get_bloginfo('template_directory');?>/img/gallerie.png" width="35px" height="35px"/></b><p>Galerie</p></a>
 			<a href="<?php echo get_bloginfo('url');echo '/'.$link['forum'];?>"><b><img alt="forum" src="<?php echo get_bloginfo('template_directory');?>/img/forum.png" width="35px" height="35px"/></b><p>Forum</p></a>
 			<a href="<?php echo get_bloginfo('url');echo '/'.$link['articles'];?>"><b><img alt="articles" src="<?php echo get_bloginfo('template_directory');?>/img/article.png" width="35px" height="35px"/></b><p>Articles</p></a>
-			<a href="<?php echo get_bloginfo('url');echo '/'.$link['contact'];?>"><b><img alt="contact" src="<?php echo get_bloginfo('template_directory');?>/img/contact.png" width="35px" height="35px"/></b><p>Contact</p></a>
+			<a href="<?php echo get_bloginfo('url');echo '/'.$link['contact'];?>"><b><img alt="contact" src="<?php echo get_bloginfo('template_directory');?>/img/contact.png" width="35px" height="35px"/></b><p>Contacts</p></a>
 		</div>
 	</nav>			
 

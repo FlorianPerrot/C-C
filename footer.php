@@ -9,14 +9,20 @@
 						<p style="padding-top:15px;">	
 							<span>Culture et Cultures - 275 chemin de Gouste-Soulet - 26400 GRANE</span><br />
 							<span>Téléphone : 09.88.77.33.15</span><br />
-							<span>Association régie par la loi du 1er juillet 1901</span><br />
-							<span>Conception & réalisation : <a href="http://arg-studio.fr">Arg STUDIO</a></span>
+							<span>Association régie par la loi du 1er juillet 1901</span>
 						</p>
 					</div>
 				</div>
 			</footer>
 		
 		</div>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('#wait').hide();
+				$("#content").fadeIn(1000); 
+				calTailleBlocCentral();
+			});
+		</script>
 		<?php wp_footer();?>
 	</body>
 </html>

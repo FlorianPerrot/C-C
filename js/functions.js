@@ -1,6 +1,6 @@
 $time_menu = 1000;
 $time_site = 2000;
-$template_directory = "http://127.0.0.1:8080/C-C/wordpress/wp-content/themes/C-C";
+$template_directory = "/wp-content/themes/C-C";
 $color_default = "#EF6C00"
 
 var tab_color_menu = ["#EF6C00","#004478","#BA0500","#BAB500","#0E9800", "#930059"];/* Taille du tableau = nombre de lien dans le menu*/
@@ -41,9 +41,10 @@ function border_page(nom_page) {
 			.css('background',tab_color_menu[3]);
 		}
 		else if (nom_page == "galerie"){
-			$('.main').css('border','4px solid '+tab_color_menu[2]);
+			$('.main .post').css('border','4px solid '+tab_color_menu[2]);
 			$('.main h2').css('color',tab_color_menu[2]);
 			$('.gallery-info').css('background',tab_color_menu[2]);
+			$('.info, .more-link').css('background',tab_color_menu[2]);
 		}
 		else if (nom_page == 'articles'){
 			$('.post').css('border','4px solid '+tab_color_menu[4]);
@@ -106,10 +107,11 @@ function calTailleBlocCentral(){
 /* L'initialisation du site */
 function init(){
 		/*  Chargement  */
-		$(window).load(function(){
-			$('#chargement').hide();
+		/*$(window).load(function(){*/
+			$('#wait').hide();
+			$('#OLD').hide();
 			$('.bloc-content').css('visibility','visible');
-		});
+		/*});/*
 	
 		/* MAIL */
 		$('.link-courriel').each(function() {
@@ -165,7 +167,7 @@ function init(){
 
 jQuery(document).ready( function () {
 	if (readCookie("EtatSite") == null){
-		$('#content').hide();
+		//$('#content').hide();
 		$('footer .actions-site').attr('src',$template_directory + '/img/site_lock.png');
 	};
 	init();
